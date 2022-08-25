@@ -1,0 +1,222 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+.navbar {
+    background: #1b1b1b;
+}
+
+body {
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    display: none;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    margin: 0;
+    max-width: 100vw;
+    padding: 0;
+}
+
+.counter {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+#txtBox {
+    color: white;
+    font-size: 26vw;
+    border: 0;
+    background: none;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.colored {
+    color: red;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+    background: #1b1b1b;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background: #1b1b1b;
+    color: rgb(0, 148, 255);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    background: #111;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    opacity: 1;
+    transition: 2s;
+    z-index: 10;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: inline-grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(20, 2fr);
+}
+
+    .container table {
+        height: fit-content;
+        margin: auto;
+        margin-bottom: 16px;
+        color: white;
+        font-family: 'Open Sans';
+    }
+
+
+.blade {
+    margin: 0 auto;
+    margin-top: 64px;
+    grid-column: 1/21;
+}
+
+.main {
+    margin: 0;
+    grid-column: 1/21;
+    display: inherit;
+}
+
+.wikipedia {
+    max-width: 90vw;
+}
+
+th {
+    font-size: 1.5vw;
+    min-width: 12vw;
+}
+
+td {
+    font-size: 1.2vw;
+}
+
+label {
+    font-size: 1.2vw;
+}
+
+.earnChecks {
+    display: inline-flex;
+}
+
+    .earnChecks label {
+        padding-right: 8px;
+        color: white;
+    }
+
+.wikipedia {
+}
+
+    .wikipedia td {
+        padding-right: 32px;
+        font-size: 1.5rem;
+    }
+
+a {
+    color: lightskyblue;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+.seea {
+    color: deepskyblue;
+}
+
+    .seea :hover {
+        text-decoration: underline;
+        color: blueviolet;
+    }
+
+
+/* Small Screen response
+-------------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+    .blade {
+        margin: 0 auto;
+        margin-top: 64px;
+        grid-column: 1/21;
+    }
+
+    .main {
+        margin: 0;
+        grid-column: 1/21;
+        display: inherit;
+    }
+
+    .main table th {
+        min-width: 100px;
+    }
+
+}

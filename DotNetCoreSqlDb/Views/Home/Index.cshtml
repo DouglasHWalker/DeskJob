@@ -1,0 +1,642 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<style>
+    .fullScreen {
+        /*transform: scale(0.2) translateY(-150vh);*/
+        transform: translateY(-100vh);
+    }
+
+    #news td {
+        padding-bottom: 4px;
+    }
+
+    .wikipedia th {
+        font-size: 1.5rem;
+    }
+
+    .wikipedia td {
+        font-size: 1.5rem;
+    }
+</style>
+<script src="~/js/site.js"></script>
+@*<script src="~/js/newsGenerator.js"></script>*@
+<script>
+    var interval;
+    var running = false;
+    function CanvasClick() {
+        var can = document.getElementById('can');
+        //can.style.opacity == 0 ? can.style.opacity = 1 : can.style.opacity = 0;
+        //can.style.display == "" ? can.style.display = "none" : can.style.display = "";
+        if (!can.classList.contains("fullScreen")) {
+            can.classList.add("fullScreen");
+        } else {
+            can.classList.remove("fullScreen");
+        }
+        startEarning();
+    }
+
+    function startEarning() {
+        if (!running) {
+            earn();
+            getRequest(api_dict.twelve_hour);
+            getWikiRequest();
+            getNewsRequest();
+            //newsAPI();
+            running = true;
+        }
+    }
+
+    // Hacker News -------------------------------------------------------------------------------------
+    let newsInitBase = "https://hacker-news.firebaseio.com/v0/topstories.json";
+    let newsBase = "https://hacker-news.firebaseio.com/v0/item/";
+
+
+    function getNewsRequest() {
+
+        var url = newsInitBase;
+        const request = new Request(url);
+
+        fetch(request)
+            .then((response) => response.json())
+            .then((data) => {
+                showNews(data);
+            })
+            .catch(console.error);
+    }
+
+    function getNewsArticle(id) {
+
+        var url = newsBase + id + ".json";
+        const request = new Request(url);
+
+        fetch(request)
+            .then((response) => response.json())
+            .then((data) => {
+                getArticleContent(data);
+            })
+            .catch(console.error);
+    }
+
+    async function showNews(data) {
+        //var newsTable = document.getElementById("news");
+
+        // header
+        //var thead = document.createElement("tr");
+        //var mrh = document.createElement("th");
+        //let title = "Tech News";
+        //mrh.innerHTML = title;
+        //thead.appendChild(mrh);
+        //newsTable.appendChild(thead);
+
+        let ids = data.slice(0, 4);
+        console.log(ids);
+        for (let id of ids) {
+            getNewsArticle(id);
+        }
+    }
+
+    function getArticleContent(data) {
+        var newsTable = document.getElementById("news");
+        var tr = document.createElement("tr");
+        var mr = document.createElement("td");
+
+        let { id, deleted, type, by, time, dead, kids, text, url, title, score } = data;
+        const date = new Date(time);
+        const formattedDate = date.toLocaleString("en-AU", {
+            hour: '2-digit',
+            minute: "numeric",
+        });
+
+        let content = title + " - " + "<a href=" + url + ">View</a></br>";
+        mr.innerHTML = content;
+
+        tr.appendChild(mr);
+        newsTable.appendChild(tr);
+        placeMemeHeadline();
+    }
+
+    function placeMemeHeadline(){
+        var newsTable = document.getElementById("news");
+        let tr = document.createElement("tr");
+        var mr = document.createElement("td");
+
+        mr.innerHTML = getHeadline();
+
+        tr.appendChild(mr);
+        newsTable.appendChild(tr);
+    }
+
+
+    // NEWS API ---------------------------------------------------------------------------------------
+    function newsAPI() {
+        // 3b1cb599605f414bbceda8bfd2c8a3c3 - Test API
+        // c3af4696522d486fb53b41c55939e9a6
+        // 0bfbb23253ca4b41a14b1afc23e0dd8b
+        // 513c776403bd40da97d145edbe0652a8
+        var apis = ['c3af4696522d486fb53b41c55939e9a6', '0bfbb23253ca4b41a14b1afc23e0dd8b', '513c776403bd40da97d145edbe0652a8'];
+        var API_KEY = apis[randomIntBetween(0, 2)];
+        var url = 'https://newsapi.org/v2/top-headlines?' +
+            'country=au&' +
+            // 'lanen&' +
+            'pageSize100&' +
+            'apiKey=' +
+            API_KEY;
+
+        var req = new Request(url);
+
+        fetch(req)
+            .then((response) => response.json())
+            .then((data) => {
+                showTopHeadlines(data);
+            })
+            .catch(console.error);
+    }
+
+    function randomIntBetween(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    function showTopHeadlines(data) {
+        console.log(data);
+        let newsTable = document.getElementById("news");
+        let news = data["articles"];
+        // header
+        //let thead = document.createElement("tr");
+        //let mrh = document.createElement("th");
+        //mrh.innerHTML = "In the News";
+        //thead.appendChild(mrh);
+
+        //newsTable.appendChild(thead);
+
+        for (let i = 0; i < news.length; i++) {
+            let tr = document.createElement("tr");
+            let mr = document.createElement("td");
+            let article = news[i];
+            mr.innerHTML = article["title"] + " - " + "<a href=" + article["url"] + ">View</a>";
+            tr.appendChild(mr);
+
+            newsTable.appendChild(tr);
+        }
+    }
+
+    function refreshNews() {
+        // refresh the news table every 30 minutes
+    }
+
+    // WIKIPEDIA ------------------------------------------------------------------------
+    var wikiBase = "https://api.wikimedia.org/feed/v1/wikipedia/en/featured/";
+
+    function getWikiRequest() {
+        var now = new Date();
+        now.setHours(now.getHours() - 10);
+        //now.setMinutes(now.getMinutes() - 30);
+        var month = now.getMonth() + 1;
+        if (month.toString().length == 1) { month = "0" + month; }
+        var day = now.getDate().toString();
+        if (day.length == 1) { day = "0" + day; }
+
+        var url = wikiBase + now.getFullYear() + "/" + month + "/" + day;
+        const request = new Request(url);
+
+        fetch(request)
+            .then((response) => response.json())
+            .then((data) => {
+                showFeatured(data);
+            })
+            .catch(console.error);
+    }
+
+    function showFeatured(data) {
+        var wikiTable = document.getElementById("wikipedia");
+        console.log(data);
+
+        var mostread = data["mostread"];
+        var onthisday = data["onthisday"];
+        var news = data["news"];
+
+        // header
+        var thead = document.createElement("tr");
+
+        var mrh = document.createElement("th");
+        let title = "Wikipedia API is offline, sorry";
+        if (mostread) { title = "Popular today" }
+        else if (onthisday) {
+            const date = new Date();
+
+            const formattedDate = date.toLocaleString("en-AU", {
+                day: "numeric",
+                month: "long",
+            });
+            title = "On this day - " + formattedDate;
+        }
+        else if (news) { title = "News from Wikipedia" }
+        mrh.innerHTML = title;
+        thead.appendChild(mrh);
+
+        //var nh = document.createElement("th");
+        //nh.innerHTML = "In the News";
+        //thead.appendld(nh);
+
+        wikiTable.appendChild(thead);
+
+        for (var i = 0; i < 5; i++) {
+            var tr = document.createElement("tr");
+
+            // most read
+            var mr = document.createElement("td");
+            let content = "";
+
+            if (mostread) {
+                let article = mostread["articles"][i];
+                content = "<a href=" + article["content_urls"]["desktop"]["page"] + ">" + article["displaytitle"] + "</a>" + " - " + article["description"];
+            }
+            else if (onthisday) { content = onthisday[i]["year"] + " - " + onthisday[i]["text"]; }
+            else if (news) { content = news[i]["story"].replace("(pictured)", ""); }
+
+            mr.innerHTML = content;
+            tr.appendChild(mr);
+
+            // news
+            //var n = document.createElement("td");
+            //n.innerHTML =
+            //tr.appendChild(n);
+
+            // on this day
+            //var otd = document.createElement("td");
+            //otd.innerHTML =
+            //tr.appendChild(otd);
+
+            wikiTable.appendChild(tr);
+        }
+
+        // meme row
+        //var tr = document.createElement("tr");
+        //var n = document.createElement("td");
+        //n.innerHTML = "UniSA students make a big impact at DXC. Students <a class='seea' href='https://www.youtube.com/watch?v=LjrcW-sDVM4'>Jack Beales</a>, <a class='seea' href='https://www.youtube.com/watch?v=35yj8u6oE_g'>Matt Caust</a>, and <a class='seea' href='https://www.youtube.com/watch?v=iik25wqIuFo'>Patrick Beevor</a> have stolen the show.";
+        //tr.appendChild(n);
+        //wikiTable.appendChild(tr);
+
+
+    }
+
+
+
+    // WEATHER -------------------------------------------------------------------
+    let api_dict = {
+        current: 'https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/5070?apikey=rKaK96uaLSxDh1NGZHZsGa1GRkhHkpGv&details=true&metric=true',
+        five_day: 'https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/5070?apikey=rKaK96uaLSxDh1NGZHZsGa1GRkhHkpGv&details=true&metric=true',
+        twelve_hour: 'https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/19423?apikey=rKaK96uaLSxDh1NGZHZsGa1GRkhHkpGv&details=true&metric=true'
+    };
+
+    function getRequest(url) {
+        const request = new Request(url);
+
+        fetch(request)
+            .then((response) => response.json())
+            .then((data) => {
+                getCurrentWeather(data);
+            })
+            .catch(console.error);
+    }
+
+    function getCurrentWeather(data) {
+        weatherCurrentTableHeader = document.getElementById("weather");
+        weatherCurrentTableRow = document.getElementById("temp");
+        weatherCurrentTableRain = document.getElementById("rain");
+
+        let numHours = 6
+        for (var i = 0; i < numHours; i++) {
+            // TIME - HEADER
+            var th = document.createElement('th');
+            time = new Date(data[i]['DateTime']);
+            th.innerHTML = ConvertTime(time);
+            // TEMP
+            var temp = document.createElement('td');
+            temp.innerHTML = data[i]['RealFeelTemperature']["Value"] + '\u00B0' + "C";
+            // rain chance
+            var rain = document.createElement('td');
+            rain.innerHTML = data[i]['RainProbability'] + "%";
+
+
+            weatherCurrentTableHeader.appendChild(th);
+            weatherCurrentTableRow.appendChild(temp);
+            weatherCurrentTableRain.appendChild(rain);
+        }
+    }
+
+    function ConvertTime(time) {
+        var hours = time.getHours();
+        var minutes = time.getMinutes();
+        var ampm = hours >= 12 ? 'pm' : 'am';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        //var strTime = hours + ':' + minutes + ' ' + ampm;
+        var strTime = hours + ' ' + ampm;
+        return strTime;
+    }
+
+    // PAY --------------------------------------------------------------
+    function getBusinessDatesCount(startDate, endDate) {
+        let count = 0;
+        const curDate = new Date(startDate.getTime());
+        while (curDate <= endDate) {
+            const dayOfWeek = curDate.getDay();
+            if (dayOfWeek !== 0 && dayOfWeek !== 6) count++;
+            curDate.setDate(curDate.getDate() + 1);
+        }
+        return count;
+    }
+
+    var baseSalary = 58149.53;
+
+    function earn() {
+        var superContribution = document.getElementById("super").checked ? 0.895 : 1.0;
+        var taxPayable = document.getElementById("tax").checked ? 1541.28 : 0;
+
+        var now = new Date();
+        // Calculate the earnings per second
+        //var earnPerSecond = (((58149.53 * 0.895) - 9365.42) / 52 / 5 / 7.5 / 60 / 60);
+        var earnPerSecond = (((baseSalary)) / 52 / 5 / 7.5 / 60 / 60); // Correct
+        var afterSuper = (((baseSalary * superContribution)) / 52 / 5 / 7.5 / 60 / 60); // Correct
+        var afterTax = (((baseSalary * superContribution) - taxPayable) / 52 / 5 / 7.5 / 60 / 60); // Correct
+        earnPerSecond = afterTax;
+
+        // start date
+        var startDate = new Date(2022, 6, 18, 9, 0);
+
+        var startTime = new Date();
+        startTime.setHours(9, 0, 0, 0);
+
+        var endTime = new Date();
+        endTime.setHours(16, 30, 0, 0);
+
+
+        // Calculate the number of seconds since start of day
+        var totalSecondsInDay = (endTime - startTime) / 1000;
+
+        // today
+        var today = new Date();
+        today.setHours(9, 0, 0, 0);
+        var timeElapsed = (now - startTime) / 1000;
+        if (timeElapsed <= 0) {
+            timeElapsed = 0;
+        } else if (timeElapsed >= totalSecondsInDay) {
+            timeElapsed = totalSecondsInDay;
+        }
+        // check if sat or sun
+        if (today.getDay() == 0 || today.getDay() == 6) {
+            timeElapsed = 0;
+        }
+
+
+        // week
+        var week = timeElapsed + ((today.getDay() - 1) * 7.5 * 60 * 60);
+        // fortnight - fix up scope to current pay scale (forttnight)
+        var fortnight = isPayWeek() ? week + (5 * 7.5 * 60 * 60) : week;
+        // month
+        var month = fortnight + (2 * (5 * 7.5 * 60 * 60));
+        // total: TODO - Total
+        var numberOfBusinessDays = getBusinessDatesCount(startDate, now);
+        var total = timeElapsed + (numberOfBusinessDays * 7.5 * 60 * 60);
+
+        var formatter = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+        });
+
+        populateData(earnPerSecond, "standard");
+
+        function populateData(data, tagId) {
+            cols = document.getElementById(tagId).getElementsByTagName("td");
+
+            cols[0].innerText = formatter.format(data * timeElapsed);
+            cols[1].innerText = formatter.format(data * week);
+            cols[2].innerText = formatter.format(data * fortnight);
+            cols[3].innerText = formatter.format(data * month);
+            cols[4].innerText = formatter.format(data * total);
+        }
+
+
+        clearInterval(interval);
+        interval = setInterval(earn, 1000);
+        // TODO: stop the inteval if running on seoncd click
+    }
+
+    function isPayWeek() {
+        var currentdate = new Date();
+        var oneJan = new Date(currentdate.getFullYear(), 0, 1);
+        var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
+        var currWeek = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
+        // its a pay week if the week is odd
+        let isPayWeek = (currWeek % 2 != 1);
+        return isPayWeek;
+    }
+
+    function wip() {
+        alert(`\
+                                                            ___________________________________¶¶¶¶
+                                                            ________________________¶¶¶¶____¶¶¶¶11¶
+                                                            ________________________¶¶1¶¶_¶¶¶¶1111¶
+                                                            _______________________¶¶111¶¶¶1111111¶
+                                                            ___________________¶¶¶_¶1111¶¶1111111¶
+                                                            ___________________¶11¶¶111¶¶111111¶¶
+                                                            ___________________¶11¶1111¶111111¶¶
+                                                            __________________¶¶11¶111¶111111¶¶
+                                                            __________________¶11¶111¶¶111111¶
+                                                            __________________¶11¶111¶1111111¶
+                                                            _________________¶11¶111¶11111111¶
+                                                            _________________¶1¶111¶¶1111111¶¶
+                                                            ________________¶1¶¶111¶1111111¶¶
+                                                            _______________¶¶1¶111¶1111111¶¶
+                                                            _______________¶¶¶111¶11111111¶
+                                                            ______________¶¶¶11¶¶111111111¶
+                                                            ______________¶¶11¶¶111111¶¶¶1¶¶
+                                                            _____________¶11¶¶1111111¶111111¶¶
+                                                            ___________¶¶¶¶¶1111111¶¶11111111¶¶¶
+                                                            __________¶¶¶1111111¶¶1111111111111111¶¶¶
+                                                            _________¶¶111111¶¶¶11111111111111111111¶¶¶¶
+                                                            _________¶111111¶¶1111111111111111111111111¶¶¶
+                                                            _________¶111111¶1111111111¶¶¶111111111111111¶
+                                                            ________¶11111111111111111¶¶_¶¶¶¶¶¶¶¶11111111¶
+                                                            _______¶¶111111111111111¶¶¶________¶11111111¶¶
+                                                            _______¶11111111111¶¶¶¶¶¶__________¶11111111¶
+                                                            ______¶¶11111111111¶¶_____________¶¶11111¶¶
+                                                            ______¶111111111111¶______________¶¶11111¶
+                                                            _____¶¶111111111111¶________________¶¶¶¶¶¶¶¶¶¶¶¶
+                                                            _____¶1111111111111¶________________¶¶¶111111¶¶¶¶
+                                                            _____¶1111111111111¶¶_____________¶¶¶111111¶¶¶11¶
+                                                            ____¶¶1111111111111¶¶¶_________¶¶¶1111111¶¶11111¶
+                                                            ____¶1111111111111111¶¶¶¶¶¶¶¶¶¶¶111111111¶1111¶¶
+                                                            ____¶111111111111111111¶¶¶¶11111111111111¶¶¶¶¶¶
+                                                            ___¶111111111111111111111111111111111111111¶¶¶
+                                                            __¶111111111111111111111111111111111111111¶¶
+                                                            ¶¶11111111111111111111111111111111111111¶¶¶
+                                                            111111111111111111111111111111111¶¶¶¶¶¶¶¶
+                                                            111111111111111111111111111111¶¶¶¶
+                                                            1111111111111111111111111111¶¶¶
+                                                            111111111111111111111111111¶¶
+                                                            1111111111111111111111111¶¶
+                                                            111111111111111111111111¶¶
+                                                            1111111111111111111111¶¶
+                                                            111111111111111111¶¶¶¶
+                                                            111111111¶¶¶¶¶¶¶¶¶¶
+                                                            111111¶¶¶
+                                                            ¶¶¶¶¶¶¶
+                                                            I'm working on it.'
+                                                            `);
+    }
+
+</script>
+<div onclick="CanvasClick()" id="canContainer">
+
+    <canvas id="can" style="opacity: 1" tabindex=0></canvas>
+</div>
+
+<div class="container">
+    <div class="blade" style="margin-top: 0;">
+        <div class="wikipedia">
+            @*<h2 style="color: white">Wikipedia</h2>*@
+            <table id="wikipedia">
+            </table>
+        </div>
+    </div>
+    <div class="main" style="margin-top: 64px">
+        <table>
+            <tr>
+                <th onclick="CanvasClick()">Today</th>
+                <th onclick="CanvasClick()">Week</th>
+                <th onclick="CanvasClick()">Paycycle</th>
+                <th onclick="wip()">Month</th>
+                <th onclick="wip()">Total</th>
+            </tr>
+            <tr id="standard">
+                <td onclick="CanvasClick()"></td>
+                <td onclick="CanvasClick()"></td>
+                <td onclick="CanvasClick()"></td>
+                <td onclick="wip()"></td>
+                <td onclick="wip()"></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="earnChecks" style="z-index: 5">
+                        <div>
+                            <label for="tax">Tax</label>
+                            <input type="checkbox" id="tax" onchange="earn()" Checked />
+                        </div>
+                        <div>
+                            <label for="super" style="padding-left: 16px">Super</label>
+                            <input type="checkbox" id="super" onchange="earn()" Checked />
+                        </div>
+                    </div>
+                <td>
+
+            </tr>
+        </table>
+
+
+        <div class="weather" style="margin-top: 32px">
+            @*<h2 style="color: white">Forecast</h2>*@
+            <table>
+                <tr id="weather"></tr>
+                <tr id="temp"></tr>
+                <tr id="rain"></tr>
+            </table>
+        </div>
+    </div>
+    <div class="blade">
+        <div class="wikipedia">
+            <h2 style="color: white">Hacker News</h2>
+            <div style="overflow-x: scroll;overflow-x: hidden;">
+                <table id="news">
+                </table>
+            </div>
+        </div>
+        @*
+        <div class="wikipedia">
+        <h2 style="font-size: 1.5rem; color: white; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color="">In the News</h2>
+        <div style="max-height: 160px; overflow-x: scroll;overflow-x: hidden;max-width: 60vw;">
+        <table>
+        <tr><td>Clinicopathological correlations and obstetric management of pregnant women with monkeypox virus infection - News-Medical.Net - <a href="`https://www.news-medical.net/news/20220823/Clinicopathological-correlations-and-obstetric-management-of-pregnant-women-with-monkeypox-virus-infection.aspx`">View</a></td></tr>
+        <tr><td>Storm’s ‘impressive’ Munster offer revealed as Dolphins target faces ‘hardest life call’ - Fox Sports - <a href="`https://www.foxsports.com.au/nrl/nrl-premiership/nrl-2022-cameron-munster-contract-melbourne-storm-extension-offer-update-dolphins-who-will-munster-sign-with/news-story/b9a08ec9594e69a83ba4fcdee1bed77d`">View</a></td></tr>
+        <tr><td>Sydney man stumbles across his friend involved in serious motorbike crash - 9News - <a href="`https://www.9news.com.au/national/sydney-father-seriously-injured-in-motorbike-crash-best-friend-helps-save-him/6f3afa2e-1f44-46a9-9754-3d582f0a0c72`">View</a></td></tr>
+        <tr><td>Astrophotographers Andrew McCarthy and Connor Matherne outdo NASA with 'ridiculously detailed' Moon shot - ABC News - <a href="`https://www.abc.net.au/news/2022-08-23/astrophotographers-shoot-ridiculously-detailed-moon-pictures/101363074`">View</a></td></tr>
+        <tr><td>Builders are collapsing in a loss-making boom, and 'greed' is to blame | The Business | ABC News - ABC News (Australia) - <a href="`https://www.youtube.com/watch?v=NFjzcIYIbXM`">View</a></td></tr>
+        <tr><td>As it happened: Solicitor-General finds Scott Morrison validly appointed to industry portfolio but criticises secrecy; PM says further inquiry needed - Sydney Morning Herald - <a href="`https://www.smh.com.au/national/australia-news-live-pm-to-release-legal-advice-surrounding-scott-morrison-s-appointment-to-five-minister-portfolios-20220822-p5bbud.html`">View</a></td></tr>
+        <tr><td>Cornea implant made of collagen from pig’s skin restores vision - News-Medical.Net - <a href="`https://www.news-medical.net/news/20220823/Cornea-implant-made-of-collagen-from-pige28099s-skin-restores-vision.aspx`">View</a></td></tr>
+        <tr><td>Biggest threat facing Australia - news.com.au - <a href="`https://www.news.com.au/technology/outgoing-telstra-ceo-andy-penn-warns-australia-at-risk-of-cyber-attacks/news-story/cd187124cc964c38e8b6cd3936c01fde`">View</a></td></tr>
+        <tr><td>Caterpillar-Like Bacteria Evolved To Survive in the Mouth - Technology Networks - <a href="`https://www.technologynetworks.com/immunology/news/caterpillar-like-bacteria-evolved-to-survive-the-mouth-364940`">View</a></td></tr>
+        <tr><td>NSW weather: Cold snap hits Sydney; snow falls in parts of state - ABC News - <a href="`https://www.abc.net.au/news/2022-08-23/nsw-weather-temperatures-plunge-in-sydney/101362518`">View</a></td></tr>
+        <tr><td>John Farnham in hospital after cancer diagnosis - 9News - <a href="`https://www.9news.com.au/national/john-farnham-cancer-diagnosis-statement-reveals-singer-undergo-surgery/e99cb791-36ff-4c26-b74e-ff4ff82cb391`">View</a></td></tr>
+        <tr><td>Peter Dutton's ban on 'woke' defence events overturned - ABC News - <a href="`https://www.abc.net.au/news/2022-08-23/woke-defence-morning-tea-ban-overturned/101362596`">View</a></td></tr>
+        <tr><td>Contact tracer jailed for trying to coerce isolating woman into sex - 9News - <a href="`https://www.9news.com.au/national/contact-tracer-jailed-for-threatening-woman-demanding-sex-victoria/84df505b-80e8-470d-b4e4-66d190efb00a`">View</a></td></tr>
+        <tr><td>Lachlan Murdoch launches defamation proceedings against Crikey - Sydney Morning Herald - <a href="`https://www.smh.com.au/business/companies/lachlan-murdoch-poised-to-file-defamation-proceedings-against-crikey-20220823-p5bc3g.html`">View</a></td></tr>
+        <tr><td>China issues punishments over 'ugly' childrens' books - 9News - <a href="`https://www.9news.com.au/world/china-government-punishes-creators-of-childrens-books/cf94955b-6762-4f25-aa1e-fe43f86458f2`">View</a></td></tr>
+        <tr><td>High-risk gamblers 'actively encouraged' to come to Queensland's Star Entertainment Group's casinos, inquiry hears - ABC News - <a href="`https://www.abc.net.au/news/2022-08-23/inquiry-star-casinos-queensland-problem-gamblers/101361860`">View</a></td></tr>
+        <tr><td>Caviar Launches Custom Galaxy Z Fold 4 Models: Here's What Rs 8.93 Lakh Gets You In A Smartphone - News18 - <a href="`https://www.news18.com/news/tech/caviar-launches-custom-galaxy-z-fold-4-models-heres-what-rs-8-93-lakh-gets-you-in-a-smartphone-5803849.html`">View</a></td></tr>
+        <tr><td>NRL team lists round 24: Timely boost for minor premiers Penrith as star makes surprise early return - Wide World of Sports - <a href="`https://wwos.nine.com.au/nrl/team-lists-round-24-2022-full-squads-every-club-injuries-players/a51de5c8-14fe-4741-bd3a-1a845db31bc7`">View</a></td></tr>
+        <tr><td>Tiahleigh Palmer's killer Rick Thorburn found unresponsive in prison cell - 9News - <a href="`https://www.9news.com.au/national/rick-thorburn-child-killer-tiahleigh-palmer-found-unresponsive-in-prison-cell-brisbane-queensland-news/17fc752b-d722-4397-b160-f67ed07290cc`">View</a></td></tr>
+        <tr><td>Chinese tourists stranded in Tibet as coronavirus cases in China reach three-month high - ABC News - <a href="`https://www.abc.net.au/news/2022-08-23/china-tourists-stranded-highway-tibet-covid-19-coronavirus/101356470`">View</a></td></tr>
+        <tr><td>Police weigh up fresh High Country search as accused killer contests murder charges - The Age - <a href="`https://www.theage.com.au/national/victoria/police-weigh-up-return-to-high-country-as-accused-killer-contests-murder-charges-20220823-p5bbys.html`">View</a></td></tr>
+        <tr><td>New Zealand’s latest ‘freedom’ protest is a sad farce staged by a doomed cause - The Guardian - <a href="`https://amp.theguardian.com/world/2022/aug/23/new-zealands-latest-freedom-protest-is-a-sad-farce-staged-by-a-doomed-cause`">View</a></td></tr>
+        <tr><td>AFL or WWE? Footy world blown away by Giants’ ‘absolutely jacked’ new coach - Fox Sports - <a href="`https://www.foxsports.com.au/afl/teams/greater-western-sydney-giants/footy-world-blown-away-by-absolutely-jacked-giants-coach/news-story/54429aa2d45a72f1ef19be1bc500a8fb`">View</a></td></tr>
+        <tr><td>NASA: Black hole sounds heard for first time - Liverpool City Champion - <a href="`https://www.liverpoolchampion.com.au/story/7872087/sound-of-silence-the-eerie-noise-escaping-a-black-hole/`">View</a></td></tr>
+        <tr><td>Abortion barriers lead women to self-harm, study finds - ABC News - <a href="`https://www.abc.net.au/news/2022-08-23/abortion-barriers-lead-women-to-self-harm-study-finds/101360646`">View</a></td></tr>
+        <tr><td>Margaret Urlich, Aria winner and popular New Zealand singer, dies aged 57 - The Guardian - <a href="`https://amp.theguardian.com/culture/2022/aug/23/margaret-urlich-aria-winner-and-popular-new-zealand-singer-dies-aged-57`">View</a></td></tr>
+        <tr><td>Auroras, tiny moons: NASA’s Webb telescope shows Jupiter as you’ve never seen it before - Sydney Morning Herald - <a href="`https://www.smh.com.au/world/north-america/auroras-tiny-moons-nasa-s-webb-telescope-shows-jupiter-as-you-ve-never-seen-it-before-20220823-p5bc2d.html`">View</a></td></tr>
+        <tr><td>Revealed: The real-life filming locations from House of the Dragon - Traveller - <a href="`https://www.traveller.com.au/where-was-house-of-the-dragon-filmed-the-reallife-locations-from-the-game-of-thrones-prequel-h25vtj`">View</a></td></tr>
+        <tr><td>Controversial $1bn Dendrobium coalmine expansion plan abandoned by mining company - The Guardian - <a href="`https://amp.theguardian.com/environment/2022/aug/23/controversial-1bn-dendrobium-coalmine-expansion-plan-abandoned-by-mining-company`">View</a></td></tr>
+        <tr><td>Instagram's next feature might be a copy of BeReal - Yahoo Finance Australia - <a href="`https://au.news.yahoo.com/instagram-bereal-candid-challenges-232117658.html`">View</a></td></tr>
+        <tr><td>ASX sinks to two-week low, Wall Street and European markets fall on recession signals - ABC News - <a href="`https://www.abc.net.au/news/2022-08-23/asx-wall-street-european-share-market-recession-signal/101359700`">View</a></td></tr>
+        <tr><td>Digging deep for dark matter - Phys.org - <a href="`https://phys.org/news/2022-08-deep-dark.html`">View</a></td></tr>
+        <tr><td>Reality TV star Scott Disick crashes his $327,000 Lamborghini in scary single-car accident - 9Honey Celebrity - <a href="`https://celebrity.nine.com.au/latest/scott-disick-crashes-lamborghini-single-car-accident/65bc19a3-fe6b-4318-b64f-0101d04afd13`">View</a></td></tr>
+        <tr><td>Not just revenge, we need victory in Ukraine: Alexander Dugin after daughter’s death - Sydney Morning Herald - <a href="`https://www.smh.com.au/world/europe/not-just-revenge-we-need-victory-in-ukraine-alexander-dugin-after-daughter-s-death-20220823-p5bbwx.html`">View</a></td></tr>
+        <tr><td>Struggling with brain fog after a COVID-19 infection? You're not alone, experts say - ABC News - <a href="`https://www.abc.net.au/news/2022-08-23/brain-fog-a-symptom-of-long-covid-19/101355350`">View</a></td></tr>
+        <tr><td>Is polio in New York? The complicated story of the virus' reemergence - Grid - <a href="`https://www.grid.news/story/science/2022/08/22/is-polio-returning-in-new-york-the-complicated-story-of-the-virus-reemergence-and-why-our-response-matters/`">View</a></td></tr>
+        <tr><td>Lamborghini takes Urus SUV from mad to bonkers with new Performante version arriving to take the fight to Aston Martin's DBX 707, Bentley Bentayga Speed, Porsche Cayenne Turbo GT and Ferrari's upcoming Purosangue - CarsGuide - <a href="`https://www.carsguide.com.au/car-news/lamborghini-takes-urus-suv-from-mad-to-bonkers-with-new-performante-version-arriving-to`">View</a></td></tr>
+        </table>
+        </div>
+        </div>*@
+
+    </div>
+</div>
+@*<h1>En Counting</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>*@
+
