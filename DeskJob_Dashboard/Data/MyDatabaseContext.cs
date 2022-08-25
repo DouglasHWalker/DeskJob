@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using DotNetCoreSqlDb.Models;
+using DeskJob_Dashboard.Models;
 
-namespace DotNetCoreSqlDb.Models
+namespace DeskJob_Dashboard.Models
 {
     public class MyDatabaseContext : DbContext
     {
@@ -14,6 +14,6 @@ namespace DotNetCoreSqlDb.Models
         {
         }
 
-        public DbSet<DotNetCoreSqlDb.Models.Todo> Todo { get; set; }
+        public DbSet<DeskJob_Dashboard.Models.Todo> Todo { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DotNetCoreSqlDb.Models
+namespace DeskJob_Dashboard.Models
 {
     public class Todo
     {

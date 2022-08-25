@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using DotNetCoreSqlDb.Models;
+using DeskJob_Dashboard.Models;
 
-namespace DotNetCoreSqlDb.Controllers
+namespace DeskJob_Dashboard.Controllers
 {
     public class HomeController : Controller
     {

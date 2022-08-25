@@ -11,9 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using DotNetCoreSqlDb.Models;
+using DeskJob_Dashboard.Models;
 
-namespace DotNetCoreSqlDb
+namespace DeskJob_Dashboard
 {
     public class Startup
     {

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace DotNetCoreSqlDb.Migrations
+namespace DeskJob_Dashboard.Migrations
 {
     public partial class Initialise : Migration
     {
