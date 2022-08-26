@@ -1,4 +1,6 @@
-﻿@{ ViewData["Title"] = "Index"; }
+﻿@{
+    ViewData["Title"] = "Index";
+}
 
 @*-------- Page level CSS -------------*@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -22,13 +24,13 @@
 </style>
 
 @*------------- Scripts, APIS and helper methods ----------------*@
-<script src="~/js/CounterDisplay.js"></script>
-<script src="~/js/HackerNews.js"></script>
-<script src="~/js/WikipediaAPI.js"></script>
-<script src="~/js/NewsAPI.js"></script>
-<script src="~/js/Salary.js"></script>
-<script src="~/js/AccuWeatherAPI.js"></script>
-<script src="~/js/newsGenerator.js"></script>
+<script src="~/js/CounterDisplay.js?1"></script>
+<script src="~/js/HackerNews.js?1"></script>
+<script src="~/js/WikipediaAPI.js?1"></script>
+<script src="~/js/NewsAPI.js?1"></script>
+<script src="~/js/Salary.js?1"></script>
+<script src="~/js/AccuWeatherAPI.js?1"></script>
+<script src="~/js/newsGenerator.js?1"></script>
 
 <div onclick="CanvasClick()" id="canContainer">
     <canvas id="can" style="opacity: 1" tabindex=0></canvas>
@@ -44,22 +46,22 @@
         </div>
     </div>
 
-   @*------------------ Salary and pay -------------------------*@
+    @*------------------ Salary and pay -------------------------*@
     <div class="main" style="margin-top: 64px">
         <table>
             <tr>
-                <th onclick="CanvasClick()">Today</th>
-                <th onclick="CanvasClick()">Week</th>
-                <th onclick="CanvasClick()">Paycycle</th>
-                <th onclick="wip()">Month</th>
-                <th onclick="wip()">Total</th>
+                <th onclick="CanvasClick('today')">Today</th>
+                <th onclick="CanvasClick('week')">Week</th>
+                <th onclick="CanvasClick('cycle')">Paycycle</th>
+                <th onclick="CanvasClick('month')">Month</th>
+                <th onclick="CanvasClick('total')">Total</th>
             </tr>
             <tr id="standard">
-                <td onclick="CanvasClick()"></td>
-                <td onclick="CanvasClick()"></td>
-                <td onclick="CanvasClick()"></td>
-                <td onclick="wip()"></td>
-                <td onclick="wip()"></td>
+                <td onclick="CanvasClick('today')"></td>
+                <td onclick="CanvasClick('week')"></td>
+                <td onclick="CanvasClick('cycle')"></td>
+                <td onclick="CanvasClick('month')"></td>
+                <td onclick="CanvasClick('total')"></td>
             </tr>
             <tr>
                 <td>
@@ -102,7 +104,8 @@
 <script>
     var interval;
     var running = false;
-    function CanvasClick() {
+
+    function CanvasClick(target) {
         var can = document.getElementById('can');
         //can.style.opacity == 0 ? can.style.opacity = 1 : can.style.opacity = 0;
         //can.style.display == "" ? can.style.display = "none" : can.style.display = "";
@@ -112,6 +115,7 @@
             can.classList.remove("fullScreen");
         }
         startEarning();
+        setElapsedToDisplay(target);
     }
 
     function startEarning() {
@@ -125,4 +129,6 @@
             running = true;
         }
     }
+
+   
 </script>

@@ -1,27 +1,9 @@
-﻿function calcEarnPerSecond(cycleTarget) {
+﻿var elapsedToDisplay = 0;
+
+function calcEarnPerSecond() {
+    calculateElapsed();
+
     var baseSalary = 58149.53;
-    var now = new Date();
-
-    var startTime = new Date();
-    startTime.setHours(9, 0, 0, 0);
-
-    var endTime = new Date();
-    endTime.setHours(16, 30, 0, 0);
-
-    // Calculate the number of seconds since start of day
-    var totalSecondsInDay = (endTime - startTime) / 1000;
-
-    var timeElapsed = (now - startTime) / 1000;
-    if (timeElapsed <= 0) {
-        timeElapsed = 0
-    } else if (timeElapsed >= totalSecondsInDay) {
-        timeElapsed = totalSecondsInDay;
-    }
-    // check if sat or sun
-    if (now.getDay() == 0 || now.getDay() == 6) {
-        timeElapsed = 0;
-    }
-
     var superContribution = document.getElementById("super").checked ? 0.895 : 1.0;
     var taxPayable = document.getElementById("tax").checked ? 1541.28 : 0;
 
@@ -32,7 +14,7 @@
     var afterTax = (((baseSalary * superContribution) - taxPayable) / 52 / 5 / 7.5 / 60 / 60); // Correct
     earnPerSecond = afterTax;
 
-    return timeElapsed * earnPerSecond
+    return elapsedToDisplay * earnPerSecond;
 }
 
 var particleAlphabet = {
@@ -66,7 +48,7 @@ var particleAlphabet = {
             particleAlphabet.getPixels(particleAlphabet.tmpCanvas, particleAlphabet.tmpCtx);
         }, 2000);
 
-        particleAlphabet.makeParticles(4000);
+        particleAlphabet.makeParticles(5000);
         particleAlphabet.animate();
     },
     currentPos: 0,
