@@ -4,67 +4,175 @@
     ViewData["Title"] = "Index";
 }
 
+@*<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">*@
 <link rel="stylesheet" href="~/css/FlashCard.css" />
+<script src="~/js/selectFlashcards.js?1"></script>
 
 <div class="page-container">
-    <h1>Index</h1>
-
+    <h1 style="min-width: 100%">Flash Cards</h1>
+    @*
     <p>
-        <a asp-action="Create">Create New</a>
-    </p>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Certificate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Category)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Subcategory)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Front)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Back)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ImageUrl)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Certificate)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Category)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Subcategory)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Front)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Back)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ImageUrl)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
+    <a asp-action="Create">Create new Flashcard.</a>
+    </p>*@
+    <div class="contentContainer">
+        <div class="tableContainer">
+            @*--------------------- Certificate -------------------------*@
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Certificate
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var certificate in Model.Select(card => card.Certificate).Distinct())
+                    {
+                        <tr onclick="filterFlashcardsBy(this, 'certificate', '@(certificate)')">
+                            <td>
+                                @Html.DisplayFor(modelItem => certificate)
+                                @*AZ-900: Microsoft Azure Fundamentals*@
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            @*--------------------- Module ---------------------------*@
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Module
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var certificate in Model.Select(card => card.Category).Distinct())
+                    {
+                        <tr onclick="filterFlashcardsBy(this, 'module', '@(certificate)')">
+                            <td>
+                                @Html.DisplayFor(modelItem => certificate)
+                                @*Describe Cloud Computing*@
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            @*--------------------------- Topic ------------------------------*@
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Topic
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var certificate in Model.Select(card => card.Subcategory).Distinct())
+                    {
+                        <tr onclick="filterFlashcardsBy(this, 'topic', '@(certificate)')">
+                            <td>
+                                @Html.DisplayFor(modelItem => certificate)
+                                @*Intro to Azure Fundamentals*@
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @*------------------------- Execute Practice ------------------------*@
+        <div class="card">
+            <div class="tableContainer">
+                <table>
+                    <tr>
+                        <th>Certificate</th>
+                    </tr>
+                    <tr id="certificate">
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th>Module</th>
+                    </tr>
+                    <tr id="module">
+                        <td>All</td>
+                    </tr>
+                    <tr>
+                        <th>Topic</th>
+                    </tr>
+                    <tr id="topic">
+                        <td>All</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <input type="text" />
+                <label>cards</label>
+                <button>Practice</button>
+            </div>
+            <div>
+                <input type="checkbox" />
+                <label>Shuffle</label>
+                <input type="checkbox" />
+                <label>Other</label>
+            </div>
+        </div>
+    </div>
+    @*<table >
+    <thead>
+    <tr>
+    <th>
+    @Html.DisplayNameFor(model => model.Certificate)
+    </th>
+    <th>
+    @Html.DisplayNameFor(model => model.Category)
+    </th>
+    <th>
+    @Html.DisplayNameFor(model => model.Subcategory)
+    </th>
+    <th>
+    @Html.DisplayNameFor(model => model.Front)
+    </th>
+    <th>
+    @Html.DisplayNameFor(model => model.Back)
+    </th>
+    <th>
+    @Html.DisplayNameFor(model => model.ImageUrl)
+    </th>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+    <tr>
+    <td>
+    @Html.DisplayFor(modelItem => item.Certificate)
+    </td>
+    <td>
+    @Html.DisplayFor(modelItem => item.Category)
+    </td>
+    <td>
+    @Html.DisplayFor(modelItem => item.Subcategory)
+    </td>
+    <td>
+    @Html.DisplayFor(modelItem => item.Front)
+    </td>
+    <td>
+    @Html.DisplayFor(modelItem => item.Back)
+    </td>
+    <td>
+    @Html.DisplayFor(modelItem => item.ImageUrl)
+    </td>
+    <td>
+    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+    </td>
+    </tr>
+    </tbody>
     </table>
+    }*@
 </div>

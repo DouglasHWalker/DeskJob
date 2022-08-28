@@ -4,6 +4,7 @@ let api_dict = {
     five_day: 'https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/5070?apikey=rKaK96uaLSxDh1NGZHZsGa1GRkhHkpGv&details=true&metric=true',
     twelve_hour: 'https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/19423?apikey=rKaK96uaLSxDh1NGZHZsGa1GRkhHkpGv&details=true&metric=true'
 };
+let weatherTranslated = false;
 
 function getRequest(url) {
     const request = new Request(url);
@@ -32,13 +33,15 @@ function getCurrentWeather(data) {
         temp.innerHTML = data[i]['RealFeelTemperature']["Value"] + '\u00B0' + "C";
         // rain chance
         var rain = document.createElement('td');
-        rain.innerHTML = data[i]['RainProbability'] + "%";
+        rain.innerHTML = parseFloat(data[i]['RainProbability']) + "%";
 
 
         weatherCurrentTableHeader.appendChild(th);
         weatherCurrentTableRow.appendChild(temp);
         weatherCurrentTableRain.appendChild(rain);
     }
+
+    translateWeatherInit();
 }
 
 function ConvertTime(time) {
@@ -51,4 +54,32 @@ function ConvertTime(time) {
     //var strTime = hours + ':' + minutes + ' ' + ampm;
     var strTime = hours + ' ' + ampm;
     return strTime;
+}
+
+function translateWeatherInit() {
+    let mainEl = document.getElementsByClassName("main")[0];
+    let headerEl = document.getElementsByTagName("header")[0];
+    let weatherEl = document.getElementById("theWeather");
+
+    let header_width = headerEl.offsetWidth;
+    let main_width = mainEl.offsetWidth;
+    let weather_width = weatherEl.offsetWidth;
+
+    let delta = (header_width - main_width);
+
+    let tds = weatherEl.getElementsByTagName("td");
+    let td_d = tds[1].offsetWidth;
+    delta -= td_d + tds[0].offsetWidth;
+
+    if (weatherTranslated) {
+        let hoursUseable = (Math.floor((header_width - main_width) / td_d));
+        delta -= (td_d * (hoursUseable));
+    }
+        weatherEl.style.transform = "translateX(" + delta + "px)";
+        weatherTranslated = !weatherTranslated;
+
+}
+
+function toggleWeatherTranslate() {
+    translateWeatherInit();
 }

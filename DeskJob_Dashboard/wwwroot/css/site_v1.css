@@ -7,11 +7,17 @@ for details on configuring this project to bundle and minify static web assets. 
 
 body {
     margin: auto;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
 }
 
 header {
-    display: none;
+    grid-column: 4 / 18;
+    display: grid;
+    margin-top: 64px;
+    grid-template-columns: repeat(20, 2fr);
+    overflow: hidden;
+    grid-row: 1;
 }
 
 a.navbar-brand {
@@ -104,7 +110,6 @@ body {
 * {
     margin: 0;
     padding: 0;
-    background: #111;
 }
 
 canvas {
@@ -119,8 +124,8 @@ canvas {
     width: 100vw;
     height: 100vh;
     display: inline-grid;
-    justify-content: center;
-    align-content: center;
+    justify-content: start;
+    align-content: start;
     grid-template-columns: repeat(20, 2fr);
 }
 
@@ -129,37 +134,67 @@ canvas {
         margin: auto;
         margin-bottom: 16px;
         color: white;
-        font-family: 'Open Sans';
     }
 
+#date {
+    border-bottom: solid 2px #9b9b9b;
+    font-size: 2vw;
+    font-weight: 300;
+    padding-bottom: 4px
+}
 
 .blade {
-    margin: 0 auto;
     margin-top: 64px;
-    grid-column: 1/21;
+    max-width: 50%;
 }
 
 .main {
-    margin: 0;
-    grid-column: 1/21;
-    display: inherit;
+    grid-column: 1/12;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
 }
 
-.wikipedia {
-    max-width: 90vw;
+    .main table {
+        margin: 16px;
+    }
+
+.weather {
+    grid-column: 12 / 21;
+    transition: 0.85s ease-out;
+    margin: auto 0;
+    padding-top: 8px;
+    background: #1b1b1b;
 }
+
+    .weather td {
+        min-width: 100px;
+        font-size: 1.2vw;
+        line-height: 1vw;
+    }
+
+    .weather th {
+        padding-top: 8px;
+        font-size: 0.8vw;
+        font-weight: 300;
+    }
 
 th {
-    font-size: 1.5vw;
-    min-width: 12vw;
+    font-size: 1vw;
+    font-weight: 300;
+    line-height: 0.5vw;
 }
 
 td {
-    font-size: 1.2vw;
+    font-weight: normal;
+    padding-top: 4px;
+    padding-right: 2vw;
+    font-size: 1.5vw;
 }
 
 label {
-    font-size: 1.2vw;
+    font-size: 1vw;
+    padding-right: 0.5vw;
 }
 
 .earnChecks {
@@ -167,16 +202,23 @@ label {
 }
 
     .earnChecks label {
-        padding-right: 8px;
+        padding-right: 0.5vw;
         color: white;
     }
 
 .wikipedia {
+    max-width: 90vw;
 }
 
     .wikipedia td {
-        padding-right: 32px;
-        font-size: 1.5rem;
+        font-size: 1vw;
+        padding-right: 0;
+        font-weight: 300;
+    }
+    .wikipedia th {
+        font-size: 1vw;
+        padding-bottom: 4px;
+        font-weight: 400;
     }
 
 a {
@@ -198,6 +240,17 @@ a {
         color: blueviolet;
     }
 
+.main_content {
+    grid-row: 2;
+    grid-column: 4/18;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+#rain td {
+    font-size: 1vw;
+}
 
 /* Small Screen response
 -------------------------------------------------- */
@@ -215,8 +268,7 @@ a {
         display: inherit;
     }
 
-    .main table th {
-        min-width: 100px;
-    }
-
+        .main table th {
+            min-width: 100px;
+        }
 }
