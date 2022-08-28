@@ -156,7 +156,7 @@ canvas {
 }
 
     .main table {
-        margin: 16px;
+        margin: 0px;
     }
 
 .weather {
@@ -168,7 +168,7 @@ canvas {
 }
 
     .weather td {
-        min-width: 100px;
+        min-width: 5vw;
         font-size: 1.2vw;
         line-height: 1vw;
     }
@@ -182,13 +182,13 @@ canvas {
 th {
     font-size: 1vw;
     font-weight: 300;
-    line-height: 0.5vw;
+    line-height: 10px;
 }
 
 td {
     font-weight: normal;
     padding-top: 4px;
-    padding-right: 2vw;
+    min-width: 8vw;
     font-size: 1.5vw;
 }
 
