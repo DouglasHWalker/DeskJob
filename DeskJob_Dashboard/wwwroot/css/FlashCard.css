@@ -1,0 +1,79 @@
+﻿/*------------ FlashCards ---------------*/
+body {
+    color: #d5d5d5;
+    font-family: 'Open Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-group {
+    min-width: 500px;
+}
+
+.page-container {
+    margin: 5vh 5vw;
+    width: 90vw;
+    height: 90vh;
+    display: inline-grid;
+    justify-content: center;
+    align-content: center;
+}
+
+    .page-container h1 {
+        font-size: x-large;
+        margin-bottom: 16px;
+    }
+
+.tableContainer {
+    display: inline-grid;
+    justify-content: start;
+    background: none;
+}
+
+    .tableContainer table {
+        max-height: 30%;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+        .tableContainer table tr {
+        }
+
+        .tableContainer table th {
+            font-weight: normal;
+            font-size: medium;
+        }
+
+        .tableContainer table td {
+            font-weight: lighter;
+            font-size: medium;
+        }
+
+        .tableContainer table th, .tableContainer table td {
+        transition: 0.8s;
+            padding: 0;
+        }
+
+.card {
+    background: #2b2b2b;
+    margin-left: 64px;
+}
+
+    .card table {
+        width: 100%;
+        margin: 16px;
+    }
+
+        .card table th, .card table td {
+            font-size: small;
+        }
+
+        .card table td {
+            padding-bottom: 8px;
+        }
+
+.contentContainer {
+    display: inline-flex;
+}
+
+.selected {
+    color: #00ffb9
+}

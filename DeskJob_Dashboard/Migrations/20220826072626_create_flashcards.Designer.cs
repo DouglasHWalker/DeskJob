@@ -12,43 +12,50 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DeskJob_Dashboard.Migrations
 {
     [DbContext(typeof(MyDatabaseContext))]
-    [Migration("20220809013340_Initialise")]
-    partial class Initialise
+    [Migration("20220826072626_create_flashcards")]
+    partial class create_flashcards
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.7")
+                .HasAnnotation("ProductVersion", "6.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("DotNetCoreSqlDb.Models.IncomeStream", b =>
+            modelBuilder.Entity("DeskJob_Dashboard.Models.FlashCard", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
-                    b.Property<string>("Company")
-                        .IsRequired()
+                    b.Property<string>("Back")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Salary")
-                        .HasColumnType("float");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
+                    b.Property<string>("Category")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.Property<string>("Certificate")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("IncomeStream");
+                    b.Property<string>("Front")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subcategory")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("FlashCard");
                 });
 
-            modelBuilder.Entity("DotNetCoreSqlDb.Models.Todo", b =>
+            modelBuilder.Entity("DeskJob_Dashboard.Models.Todo", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()

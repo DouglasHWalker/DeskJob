@@ -1,0 +1,65 @@
+﻿@model DeskJob_Dashboard.Models.FlashCard
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<link rel="stylesheet" href="~/css/FlashCard.css" />
+
+<div class="page-container">
+    <h1>Create</h1>
+
+    <h4>FlashCard</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Certificate" class="control-label"></label>
+                    <input asp-for="Certificate" class="form-control" />
+                    <span asp-validation-for="Certificate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category" class="control-label"></label>
+                    <input asp-for="Category" class="form-control" />
+                    <span asp-validation-for="Category" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Subcategory" class="control-label"></label>
+                    <input asp-for="Subcategory" class="form-control" />
+                    <span asp-validation-for="Subcategory" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Front" class="control-label"></label>
+                    <input asp-for="Front" class="form-control" />
+                    <span asp-validation-for="Front" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Back" class="control-label"></label>
+                    <input asp-for="Back" class="form-control" />
+                    <span asp-validation-for="Back" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ImageUrl" class="control-label"></label>
+                    <input asp-for="ImageUrl" class="form-control" />
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

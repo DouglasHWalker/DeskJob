@@ -15,5 +15,7 @@ namespace DeskJob_Dashboard.Models
         }
 
         public DbSet<DeskJob_Dashboard.Models.Todo> Todo { get; set; }
+
+        public DbSet<DeskJob_Dashboard.Models.FlashCard> FlashCard { get; set; }
     }
 }

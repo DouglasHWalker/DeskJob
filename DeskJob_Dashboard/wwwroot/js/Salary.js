@@ -38,6 +38,7 @@ function calculateElapsed() {
     // weekly, fornightly, monthly, and total
     var numberOfBusinessDays = getBusinessDatesCount(startDate, now); // since startdate
     elapsedThisWeek = elapsedToday + ((startTime.getDay() - 1) * 7.5 * 60 * 60);
+    elapsedThisWeek = (elapsedThisWeek > 0) ? elapsedThisWeek : 0;
     elapsedThisPaycycle = isPayWeek() ? elapsedThisWeek + (5 * 7.5 * 60 * 60) : elapsedThisWeek;
     elapsedThisMonth = elapsedThisPaycycle + (2 * (5 * 7.5 * 60 * 60));
     elapsedInTotal = elapsedToday + (numberOfBusinessDays * 7.5 * 60 * 60);
@@ -88,10 +89,10 @@ function displayEarnings(earnPerSecond) {
     cols = document.getElementById("standard").getElementsByTagName("td");
 
     cols[0].innerText = formatter.format(earnPerSecond * elapsedToday);
-    cols[1].innerText = formatter.format(earnPerSecond * elapsedThisWeek);
-    cols[2].innerText = formatter.format(earnPerSecond * elapsedThisPaycycle);
-    cols[3].innerText = formatter.format(earnPerSecond * elapsedThisMonth);
-    cols[4].innerText = formatter.format(earnPerSecond * elapsedInTotal);
+    //cols[1].innerText = formatter.format(earnPerSecond * elapsedThisWeek);
+    cols[1].innerText = formatter.format(earnPerSecond * elapsedThisPaycycle);
+    //cols[3].innerText = formatter.format(earnPerSecond * elapsedThisMonth);
+    cols[2].innerText = formatter.format(earnPerSecond * elapsedInTotal);
 }
 
 function isPayWeek() {

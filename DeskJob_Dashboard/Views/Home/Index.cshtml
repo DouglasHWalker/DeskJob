@@ -3,98 +3,95 @@
 }
 
 @*-------- Page level CSS -------------*@
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 <style>
     .fullScreen {
         /*transform: scale(0.2) translateY(-150vh);*/
-        transform: translateY(-100vh);
+        transform: translateY(100vh);
     }
 
     #news td {
         padding-bottom: 4px;
     }
-
-    .wikipedia th {
-        font-size: 1.5rem;
-    }
-
-    .wikipedia td {
-        font-size: 1.5rem;
-    }
 </style>
 
 @*------------- Scripts, APIS and helper methods ----------------*@
-<script src="~/js/CounterDisplay.js?1"></script>
-<script src="~/js/HackerNews.js?1"></script>
-<script src="~/js/WikipediaAPI.js?1"></script>
-<script src="~/js/NewsAPI.js?1"></script>
-<script src="~/js/Salary.js?1"></script>
-<script src="~/js/AccuWeatherAPI.js?1"></script>
-<script src="~/js/newsGenerator.js?1"></script>
+<script src="~/js/CounterDisplay.js?2"></script>
+<script src="~/js/HackerNews.js?2"></script>
+<script src="~/js/WikipediaAPI.js?2"></script>
+<script src="~/js/NewsAPI.js?2"></script>
+<script src="~/js/Salary.js?2"></script>
+<script src="~/js/AccuWeatherAPI.js?2"></script>
+<script src="~/js/newsGenerator.js?2"></script>
 
 <div onclick="CanvasClick()" id="canContainer">
-    <canvas id="can" style="opacity: 1" tabindex=0></canvas>
+    <canvas id="can" tabindex=0></canvas>
 </div>
 
 <div class="container">
-    @*--------------- Wikipedia ------------------*@
-    <div class="blade" style="margin-top: 0;">
-        <div class="wikipedia">
-            @*<h2 style="color: white">Wikipedia</h2>*@
-            <table id="wikipedia">
-            </table>
-        </div>
-    </div>
-
-    @*------------------ Salary and pay -------------------------*@
-    <div class="main" style="margin-top: 64px">
-        <table>
-            <tr>
-                <th onclick="CanvasClick('today')">Today</th>
-                <th onclick="CanvasClick('week')">Week</th>
-                <th onclick="CanvasClick('cycle')">Paycycle</th>
-                <th onclick="CanvasClick('month')">Month</th>
-                <th onclick="CanvasClick('total')">Total</th>
-            </tr>
-            <tr id="standard">
-                <td onclick="CanvasClick('today')"></td>
-                <td onclick="CanvasClick('week')"></td>
-                <td onclick="CanvasClick('cycle')"></td>
-                <td onclick="CanvasClick('month')"></td>
-                <td onclick="CanvasClick('total')"></td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="earnChecks" style="z-index: 5">
-                        <div>
-                            <label for="tax">Tax</label>
-                            <input type="checkbox" id="tax" onchange="earn()" Checked />
-                        </div>
-                        <div>
-                            <label for="super" style="padding-left: 16px">Super</label>
-                            <input type="checkbox" id="super" onchange="earn()" Checked />
-                        </div>
-                    </div>
-                <td>
-            </tr>
-        </table>
-        @*-------------------------- WEATHER --------------------------------*@
-        <div class="weather" style="margin-top: 32px">
-            @*<h2 style="color: white">Forecast</h2>*@
+    <header>
+        @*------------------ Salary and pay -------------------------*@
+        <div class="main">
             <table>
-                <tr id="weather"></tr>
-                <tr id="temp"></tr>
-                <tr id="rain"></tr>
+                <tr>
+                    <td id="date" colspan="4">Monday, 29th August</td>
+                </tr>
+                <tr id="standard">
+                    <td onclick="CanvasClick('today')"></td>
+                    @*<td onclick="CanvasClick('week')"></td>*@
+                    <td onclick="CanvasClick('cycle')"></td>
+                    @*<td onclick="CanvasClick('month')"></td>*@
+                    <td onclick="CanvasClick('total')"></td>
+                </tr>
+                <tr>
+                    <th onclick="CanvasClick('today')">today</th>
+                    @*<th onclick="CanvasClick('week')">Week</th>*@
+                    <th onclick="CanvasClick('cycle')">paycycle</th>
+                    @*<th onclick="CanvasClick('month')">Month</th>*@
+                    <th onclick="CanvasClick('total')">total</th>
+                    <th style="padding: 0;">
+                        <div>
+                            <div style="line-height: 10px">
+                                <input type="checkbox" id="super" onchange="earn()" Checked />
+                                <label for="super">super</label>
+                                <input type="checkbox" id="tax" onchange="earn()" Checked />
+                                <label for="tax">tax</label>
+                            </div>
+                        </div>
+                    <th>
+                </tr>
             </table>
         </div>
-    </div>
-    @*------------------- Hacker News Table ------------------*@
-    <div class="blade">
-        <div class="wikipedia">
-            <h2 style="color: white">Hacker News</h2>
-            <div style="overflow-x: scroll;overflow-x: hidden;">
-                <table id="news">
+        @*-------------------------- WEATHER --------------------------------*@
+        <div class="weather" id="theWeather">
+            @*<h2 style="color: white">Forecast</h2>*@
+            <table onclick="toggleWeatherTranslate()">
+                <tr id="temp"><td style="min-width: 40px; padding-right: 0; text-align: center;"></td></tr>
+                <tr id="rain"><td style="min-width: 40px; padding-right: 0; text-align: center;"><i><</i></td></tr>
+                <tr id="weather"><td style="min-width: 40px; padding-right: 0; text-align: center;"></td></tr>
+            </table>
+        </div>
+    </header>
+
+    <div class="main_content">
+        @*--------------- Wikipedia ------------------*@
+        <div class="blade">
+            <div class="wikipedia">
+                @*<h2 style="color: white">Wikipedia</h2>*@
+                <table id="wikipedia">
                 </table>
+            </div>
+        </div>
+        @*------------------- Hacker News Table ------------------*@
+        <div class="blade">
+            <div class="wikipedia">
+                <div style="overflow-x: scroll;overflow-x: hidden;">
+                    <table id="news" style="text-align: right;">
+                        <tr>
+                            <th>news.ycombinator.com</th>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -105,21 +102,20 @@
     var interval;
     var running = false;
 
+    window.onload = CanvasClick("total");
+
     function CanvasClick(target) {
         var can = document.getElementById('can');
         //can.style.opacity == 0 ? can.style.opacity = 1 : can.style.opacity = 0;
         //can.style.display == "" ? can.style.display = "none" : can.style.display = "";
-        if (!can.classList.contains("fullScreen")) {
-            can.classList.add("fullScreen");
-        } else {
-            can.classList.remove("fullScreen");
-        }
+        can.classList.toggle("fullScreen");
         startEarning();
         setElapsedToDisplay(target);
     }
 
     function startEarning() {
         if (!running) {
+            particleAlphabet.init();
             earn();
             getRequest(api_dict.twelve_hour);
             getWikiRequest();
@@ -130,5 +126,5 @@
         }
     }
 
-   
+
 </script>
