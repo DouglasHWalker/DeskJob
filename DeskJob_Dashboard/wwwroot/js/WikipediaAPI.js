@@ -17,8 +17,14 @@ function getWikiRequest() {
         .then((response) => response.json())
         .then((data) => {
             showFeatured(data);
+            showImageOfTheDay(data);
         })
         .catch(console.error);
+}
+
+function showImageOfTheDay(data) {
+    document.getElementById("iotdCell").innerHTML = "<a href=" + data.image.file_page + "><img style='max-width: 80%; max-height: 500px;' src=" + data.image.image.source + " /></a>";
+    document.getElementById("iotdCreditCell").innerHTML = data.image.description.text;
 }
 
 function showFeatured(data) {

@@ -13,16 +13,17 @@
     #news td {
         padding-bottom: 4px;
     }
+
 </style>
 
 @*------------- Scripts, APIS and helper methods ----------------*@
-<script src="~/js/CounterDisplay.js?2"></script>
-<script src="~/js/HackerNews.js?2"></script>
-<script src="~/js/WikipediaAPI.js?2"></script>
-<script src="~/js/NewsAPI.js?2"></script>
-<script src="~/js/Salary.js?2"></script>
-<script src="~/js/AccuWeatherAPI.js?2"></script>
-<script src="~/js/newsGenerator.js?2"></script>
+<script src="~/js/CounterDisplay.js?4"></script>
+<script src="~/js/HackerNews.js?4"></script>
+<script src="~/js/WikipediaAPI.js?4"></script>
+<script src="~/js/NewsAPI.js?4"></script>
+<script src="~/js/Salary.js?4"></script>
+<script src="~/js/AccuWeatherAPI.js?4"></script>
+<script src="~/js/newsGenerator.js?4"></script>
 
 <div onclick="CanvasClick()" id="canContainer">
     <canvas id="can" tabindex=0></canvas>
@@ -66,29 +67,133 @@
         <div class="weather" id="theWeather">
             @*<h2 style="color: white">Forecast</h2>*@
             <table onclick="toggleWeatherTranslate()">
-                <tr id="temp"><td style="min-width: 40px; padding-right: 0; text-align: center;"></td></tr>
-                <tr id="rain"><td style="min-width: 40px; padding-right: 0; text-align: center;"><i><</i></td></tr>
-                <tr id="weather"><td style="min-width: 40px; padding-right: 0; text-align: center;"></td></tr>
+                <tr id="temp">
+                    <td style="min-width: 40px; padding-right: 8px; text-align: center;" rowspan="3">
+                        <svg class="icon" data-src="/images/weathericons/4.svg" viewBox="0 0 288 288" width="64" height="64"><g stroke-width="9.533" fill="none" fill-rule="evenodd"><path d="M142.99 1v47.663M142.99 239.316v47.663M0 143.99h47.663M210.385 76.594l33.698-33.698M244.083 245.083l-33.698-33.698M75.594 76.594 41.896 42.896M211.624 110.959c-14.997-31.103-49.022-48.248-82.944-41.794-33.922 6.453-59.275 34.894-61.804 69.331-2.53 34.437 18.396 66.277 51.011 77.617 32.615 11.34 68.78-.649 88.16-29.227" stroke="#FF8700" style="--darkreader-inline-stroke: #ff931a;" data-darkreader-inline-stroke=""></path><path d="M250.184 124.924h-4.147a38.13 38.13 0 0 0-67.777 22.879h-6.1c-10.431.515-18.624 9.122-18.624 19.565 0 10.444 8.193 19.051 18.623 19.566h78.025a31.029 31.029 0 1 0 0-61.962v-.048ZM78.644 234.55h-4.432c0-13.162-10.67-23.832-23.832-23.832a23.45 23.45 0 0 0-18.732 9.533h-7.816c-10.53 0-19.066 8.535-19.066 19.065 0 10.53 8.536 19.065 19.066 19.065h54.812c6.581 0 11.916-5.335 11.916-11.916 0-6.58-5.335-11.916-11.916-11.916Z" stroke="#BABABA" style="--darkreader-inline-stroke: #bcb7ae;" data-darkreader-inline-stroke=""></path></g></svg>
+                    </td>
+                </tr>
+                <tr id="rain"></tr>
+                <tr id="weather"></tr>
             </table>
         </div>
     </header>
 
     <div class="main_content">
+        @*------------------- Hacker News Table ------------------*@
+        <div class="blade" style="padding-left: 0">
+            <div class="wikipedia">
+                <div style="overflow-x: scroll;overflow-x: hidden; padding-left: 0">
+                    <table id="news">
+                        <tr>
+                            <th>news.ycombinator.com</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        @*--------------- Resources ------------------*@
+        <div class="blade" style="max-height: 300px; overflow-x: hidden; overflow-y: scroll;">
+            <div class="wikipedia">
+                @*<h2 style="color: white">Wikipedia</h2>*@
+                <table>
+                    <tr>
+                        <th>Assessment</th>
+                        <th>Due</th>
+                        <th>% total</th>
+                    </tr>
+                    <tr>
+                        @*<td>Taking on a Microsoft Certification? - <a href="https://esi.microsoft.com/getcertification">Start here.</a></td>*@
+                        <td>Industry Certification</td>
+                        <td>31st Oct </td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Project Charter</td>
+                        <td>31st Oct </td>
+                        <td>5%</td>
+                    </tr>
+                    <tr>
+                        <td>Project Charter Presentation</td>
+                        <td>~31st Oct </td>
+                        <td>5%</td>
+                    </tr>
+                    <tr>
+                        <td>Progress Report</td>
+                        <td>1st Dec</td>
+                        <td>1.25%</td>
+                    </tr>
+                    <tr>
+                        <td>Progress Report</td>
+                        <td>31st Dec</td>
+                        <td>1.25%</td>
+                    </tr>
+                    <tr>
+                        <td>Progress Report</td>
+                        <td>10th Jan</td>
+                        <td>1.25%</td>
+                    </tr>
+                    <tr>
+                        <td>Performance Review</td>
+                        <td>20th Jan</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Reflective Report</td>
+                        <td>20th Jan</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Project Final - Documentation</td>
+                        <td>25th Jan</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>Project Final - Presentation</td>
+                        <td>~25th Jan</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Portfolio Journal</td>
+                        <td>26th Jan</td>
+                        <td>20%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Progress Report</td>
+                        <td>28th Jan</td>
+                        <td>1.25%</td>
+                    </tr>
+                    <tr>
+                        <td>Culture Report</td>
+                        <td>31st Jan</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 8px">Academic Paper - <b>honours only</b></td>
+                        <td>31st Jan</td>
+                        <td>10%</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
         @*--------------- Wikipedia ------------------*@
-        <div class="blade">
+        <div class="blade" style="padding-left: 0">
             <div class="wikipedia">
                 @*<h2 style="color: white">Wikipedia</h2>*@
                 <table id="wikipedia">
                 </table>
             </div>
         </div>
-        @*------------------- Hacker News Table ------------------*@
+        @*------------------- Image of the Day ------------------*@
         <div class="blade">
             <div class="wikipedia">
                 <div style="overflow-x: scroll;overflow-x: hidden;">
-                    <table id="news" style="text-align: right;">
+                    <table id="news">
                         <tr>
-                            <th>news.ycombinator.com</th>
+                            <td id="iotdCell"></td>
+                        </tr>
+                        <tr>
+                            <th style="font-size: small; padding-top: 4px" id="iotdCreditCell"></th>
                         </tr>
                     </table>
                 </div>
