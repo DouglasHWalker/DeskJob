@@ -144,6 +144,18 @@ canvas {
     padding-bottom: 4px
 }
 
+#date:hover {
+    cursor: default;
+}
+
+#weatherPrompt {
+    transition: 1.2s;
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
 .blade {
     max-width: 100%;
     padding: 16px;
