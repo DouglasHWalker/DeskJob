@@ -140,6 +140,7 @@ canvas {
     border-bottom: solid 2px #9b9b9b;
     font-size: 2vw;
     font-weight: 300;
+    line-height: 3vw;
     padding-bottom: 4px
 }
 
@@ -251,6 +252,19 @@ a {
 
 #rain td {
     font-size: 1vw;
+}
+
+.pay th:hover, .pay td:hover {
+    transition: 0.8s;
+}
+
+.pay th:hover {
+    cursor: pointer;
+}
+
+.pay td:hover {
+    cursor: pointer;
+    color: dodgerblue;
 }
 
 /* Small Screen response

@@ -33,9 +33,9 @@
     <header>
         @*------------------ Salary and pay -------------------------*@
         <div class="main">
-            <table>
+            <table class="pay">
                 <tr>
-                    <td id="date" colspan="4">Monday, 29th August</td>
+                    <th id="date" colspan="4">Monday, 29th August</th>
                 </tr>
                 <tr id="standard">
                     <td onclick="CanvasClick('today')"></td>
@@ -49,7 +49,11 @@
                     @*<th onclick="CanvasClick('week')">Week</th>*@
                     <th onclick="CanvasClick('cycle')">paycycle</th>
                     @*<th onclick="CanvasClick('month')">Month</th>*@
-                    <th onclick="CanvasClick('total')">total</th>
+                    <th onclick="CanvasClick('total')">
+                        total (click
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ddd" style="--darkreader-inline-fill: #d3cfc9; transform: rotate(270deg)" data-darkreader-inline-fill=""><path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z"></path><path fill="none" d="M0,0h24v24H0V0z"></path></svg>
+                        )
+                    </th>
                     <th style="padding: 0;">
                         <div>
                             <div style="line-height: 10px">
