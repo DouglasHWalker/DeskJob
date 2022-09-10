@@ -48,7 +48,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var certificate in Model.Select(card => card.Category).Distinct())
+                    @foreach (var certificate in Model.Select(card => card.Section).Distinct())
                     {
                         <tr onclick="filterFlashcardsBy(this, 'module', '@(certificate)')">
                             <td>
@@ -70,7 +70,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var certificate in Model.Select(card => card.Subcategory).Distinct())
+                    @foreach (var certificate in Model.Select(card => card.Module).Distinct())
                     {
                         <tr onclick="filterFlashcardsBy(this, 'topic', '@(certificate)')">
                             <td>

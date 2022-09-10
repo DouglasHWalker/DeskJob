@@ -9,7 +9,7 @@
         // determine if a filter has been set on this section
         // if NOT remove the default filter
         // add filters accordingly
-        element.innerHTML = (element.innerHTML.match(filterBy)) ? sectionDefaultValue : filterBy;
+        element.innerHTML = (element.innerHTML.match(filterBy)) ? sectionDefaultValue : filterBy);
     // update subsections as necessary
     if (section === "certification") {
         filterModules();
