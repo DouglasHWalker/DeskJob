@@ -78,6 +78,7 @@ function translateWeatherInit() {
         weatherEl.style.transform = "translateX(" + delta + "px)";
         weatherTranslated = !weatherTranslated;
 
+    document.getElementById("weatherPrompt").classList.toggle("flip");
 }
 
 function toggleWeatherTranslate() {
