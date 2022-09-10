@@ -234,9 +234,17 @@
             getNewsRequest();
             //newsAPI();
             GoodNewsMeme();
+            date();
             running = true;
         }
     }
 
+    function date(){
+        let dateElement = document.getElementById("date");
+        let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        let today = new Date();
+
+        dateElement.innerHTML = today.toLocaleString("en-AU", options);
+    }
 
 </script>
