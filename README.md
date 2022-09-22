@@ -1,5 +1,3 @@
 # DeskJob
-Internship dashboard
+Work dashboard
 
-
-## Developers - Getting started
