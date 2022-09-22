@@ -1,178 +1,344 @@
-﻿@model IEnumerable<DeskJob_Dashboard.Models.FlashCard>
+﻿@using System.Web
+@model IEnumerable<DeskJob_Dashboard.Models.FlashCard>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-@*<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">*@
-<link rel="stylesheet" href="~/css/FlashCard.css" />
-<script src="~/js/selectFlashcards.js?1"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
-<div class="page-container">
-    <h1 style="min-width: 100%">Flash Cards</h1>
-    @*
-    <p>
-    <a asp-action="Create">Create new Flashcard.</a>
-    </p>*@
-    <div class="contentContainer">
-        <div class="tableContainer">
-            @*--------------------- Certificate -------------------------*@
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            Certificate
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var certificate in Model.Select(card => card.Certificate).Distinct())
-                    {
-                        <tr onclick="filterFlashcardsBy(this, 'certificate', '@(certificate)')">
-                            <td>
-                                @Html.DisplayFor(modelItem => certificate)
-                                @*AZ-900: Microsoft Azure Fundamentals*@
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+<div class="flashcard-page-container">
 
-            @*--------------------- Module ---------------------------*@
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            Module
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var certificate in Model.Select(card => card.Section).Distinct())
-                    {
-                        <tr onclick="filterFlashcardsBy(this, 'module', '@(certificate)')">
-                            <td>
-                                @Html.DisplayFor(modelItem => certificate)
-                                @*Describe Cloud Computing*@
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-
-            @*--------------------------- Topic ------------------------------*@
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            Topic
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var certificate in Model.Select(card => card.Module).Distinct())
-                    {
-                        <tr onclick="filterFlashcardsBy(this, 'topic', '@(certificate)')">
-                            <td>
-                                @Html.DisplayFor(modelItem => certificate)
-                                @*Intro to Azure Fundamentals*@
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+    <div class="flashcard-container">
+        @*- card header -----------------------------------*@
+        <div class="card-info">
+            <span class="card-info-title">
+                @Model.FirstOrDefault().Certificate
+            </span>
+            <span class="card-info-subtitle">
+                @Model.FirstOrDefault().Section
+            </span>
         </div>
 
-        @*------------------------- Execute Practice ------------------------*@
-        <div class="card">
-            <div class="tableContainer">
-                <table>
-                    <tr>
-                        <th>Certificate</th>
-                    </tr>
-                    <tr id="certificate">
-                        <td>N/A</td>
-                    </tr>
-                    <tr>
-                        <th>Module</th>
-                    </tr>
-                    <tr id="module">
-                        <td>All</td>
-                    </tr>
-                    <tr>
-                        <th>Topic</th>
-                    </tr>
-                    <tr id="topic">
-                        <td>All</td>
-                    </tr>
-                </table>
+        @*- cards -----------------------------------------*@
+        <div class="card-frame">
+            @*- card header -------------------------------*@
+            <div class="Card-Header">
+                <span class="card-title">@Model.FirstOrDefault().Topic</span>
+                <div class="card-count">
+                    <span id="cards_completed_count">0</span> / <span>@Model.Count()</span>
+                </div>
             </div>
-            <div>
-                <input type="text" />
-                <label>cards</label>
-                <button>Practice</button>
+            @*- card content ------------------------------*@
+            <div class="Card-Content" onclick="toggleFace()">
+                <div id="prompt">
+                    <span>
+                        @Model.FirstOrDefault().PromptType
+                        <br />
+                        @Html.Raw(Model.FirstOrDefault().Prompt.Replace("\"", ""))
+                    </span>
+                </div>
+
+                <div id="answer" class="d-none">
+                    <span>
+                        @Html.Raw(Model.FirstOrDefault().Answer.Replace("\"", ""))
+                    </span>
+                </div>
             </div>
-            <div>
-                <input type="checkbox" />
-                <label>Shuffle</label>
-                <input type="checkbox" />
-                <label>Other</label>
+            @*- submit buttons ----------------------------*@
+            <div class="Submit-Buttons">
+                <div class="submit-btn" onclick="remindCard()">
+                    <div class="negative">
+                        <span class="submit-btn-content">Remind me</span>
+                    </div>
+                </div>
+                <div class="submit-btn" onclick="nextCard()">
+                    <div class="positive">
+                        <span class="submit-btn-content">I know this!!</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    @*<table >
-    <thead>
-    <tr>
-    <th>
-    @Html.DisplayNameFor(model => model.Certificate)
-    </th>
-    <th>
-    @Html.DisplayNameFor(model => model.Category)
-    </th>
-    <th>
-    @Html.DisplayNameFor(model => model.Subcategory)
-    </th>
-    <th>
-    @Html.DisplayNameFor(model => model.Front)
-    </th>
-    <th>
-    @Html.DisplayNameFor(model => model.Back)
-    </th>
-    <th>
-    @Html.DisplayNameFor(model => model.ImageUrl)
-    </th>
-    <th></th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var item in Model)
-    {
-    <tr>
-    <td>
-    @Html.DisplayFor(modelItem => item.Certificate)
-    </td>
-    <td>
-    @Html.DisplayFor(modelItem => item.Category)
-    </td>
-    <td>
-    @Html.DisplayFor(modelItem => item.Subcategory)
-    </td>
-    <td>
-    @Html.DisplayFor(modelItem => item.Front)
-    </td>
-    <td>
-    @Html.DisplayFor(modelItem => item.Back)
-    </td>
-    <td>
-    @Html.DisplayFor(modelItem => item.ImageUrl)
-    </td>
-    <td>
-    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    }*@
 </div>
+
+<script type="text/javascript">
+    let cards = @Html.Raw(Json.Serialize(Model));
+    let current_card = cards.shift();
+    let completedCount = 0;
+
+    console.log(JSON.stringify(cards));
+
+    window.onload = (event) => {
+        //nextCard();
+    }
+
+
+    function remindCard() {
+        addCard(current_card);
+        nextCard();
+    }
+
+    function nextCard() {
+        completedCount++;
+
+        if (cards.length == 0) {
+            alert("congratulations");
+            return;
+        }
+
+        current_card = cards.shift();
+        document.getElementsByClassName("card-info-title")[0].innerHTML = current_card.certificate;
+        document.getElementsByClassName("card-info-subtitle")[0].innerHTML = current_card.section;
+        document.getElementsByClassName("card-title")[0].innerHTML = current_card.topic;
+        document.getElementById("prompt").innerHTML = "<span>" + current_card.promptType + " " + current_card.prompt + "</span>";
+        document.getElementById("answer").innerHTML = "<span>" + current_card.answer + "</span>";
+
+        // cards completed
+        document.getElementById("cards_completed_count").innerHTML = completedCount;
+    }
+
+    function addCard(card) {
+        cards.push(card);
+        completedCount--;
+    }
+
+    function toggleCardVisibility() {
+        let card = document.getElementById("card-" + current_card);
+        card.classList.toggle("d-none");
+    }
+
+    function toggleFace() {
+        let prompt = document.getElementById("prompt");
+        let answer = document.getElementById("answer");
+
+        prompt.classList.toggle("d-none");
+        answer.classList.toggle("d-none");
+    }
+</script>
+
+<style>
+    th, td {
+        font-size: 12px;
+    }
+
+    .flashcard-page-container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        background-color: #1e1e1e;
+        transition: 0.8s;
+    }
+
+    .flashcard-container {
+        width: 480px;
+        height: 597px;
+        flex-grow: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 0;
+    }
+
+
+    /*Card info header*/
+    .card-info {
+        width: 480px;
+        flex-grow: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 5px;
+        padding: 10px 20px;
+        transition: 0.8s;
+    }
+
+    .card-info-title {
+        flex-grow: 0;
+        font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #fff;
+    }
+
+    .card-info-subtitle {
+        flex-grow: 0;
+        font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fff;
+    }
+
+    /*card-frame*/
+    .card-frame {
+        width: 480px;
+        height: 512px;
+        flex-grow: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
+        border-radius: 10px;
+        background-color: #2e2e2e;
+        transition: 0.8s;
+    }
+
+    .Card-Header {
+        width: 480px;
+        height: 50px;
+        flex-grow: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        background-color: #3e3e3e;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-title {
+        line-height: 100%;
+        flex-grow: 0;
+        font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fff;
+        margin: 0;
+    }
+
+    .card-count {
+        flex-grow: 0;
+        font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fff;
+    }
+    /*card contetn*/
+    .Card-Content {
+        align-self: stretch;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        padding: 0;
+        transition: 0.8s;
+    }
+
+        .Card-Content div {
+            align-self: stretch;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+            .Card-Content div span {
+                flex-grow: 0;
+                font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: left;
+                color: #fff;
+            }
+
+                .Card-Content div span ul {
+                    margin-left: 30px;
+                }
+
+    /*Submit Buttons*/
+    .Submit-Buttons {
+        width: 480px;
+        height: 62px;
+        flex-grow: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 0;
+        transition: 0.8s;
+    }
+
+    .submit-btn {
+        align-self: stretch;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        padding: 0;
+        cursor: pointer;
+        transition: 0.3s linear;
+    }
+
+        .submit-btn:hover {
+            transform: scaleY(1.2);
+            font-weight: bold;
+        }
+
+    .negative {
+        align-self: stretch;
+        flex-grow: 1;
+        background-color: #c67171;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 0 0 10px;
+    }
+
+    .positive {
+        align-self: stretch;
+        flex-grow: 1;
+        background-color: #7dc671;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 0 10px 0;
+    }
+
+    .submit-btn-content {
+        font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fff;
+    }
+</style>

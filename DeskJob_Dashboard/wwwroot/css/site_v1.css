@@ -8,7 +8,7 @@ for details on configuring this project to bundle and minify static web assets. 
 body {
     margin: auto;
     font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 header {

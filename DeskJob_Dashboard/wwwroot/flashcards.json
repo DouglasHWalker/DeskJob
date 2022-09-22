@@ -1,0 +1,602 @@
+[
+    {
+      "id": 1,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Computing",
+      "prompt": "<p>What is the main advantage of Cloud Computing?</p>",
+      "answer": "<p>It's main advantage is that it is not constrained by physical infrastructure.</p>",
+      "promptType": "Question"
+    },
+    {
+      "id": 2,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Computing",
+      "prompt": "<p>Compute Power</p>",
+      "answer": "<p>How much processing your computer can do.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 3,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Computing",
+      "prompt": "<p>Storage</p>",
+      "answer": "<p>The volume of data you can store on your device</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 4,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "The Shared Responsibility Model",
+      "prompt": "<p>In the shared responsibility model. what is the cloud consumer/customer ALWAYS responsible for?</p>",
+      "answer": "\"\t<ul>    <li>Information and Data: stored in the cloud.</li>    <li>Devices (Mobile and PCs): allowed to connect to the cloud.</li>    <li>Accounts and Identities: of people services and devices within your organisation.</li></ul>\"",
+      "promptType": "Question"
+    },
+    {
+      "id": 5,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "The Shared Responsibility Model",
+      "prompt": "<p>In the shared responsibility model. what is the cloud provider ALWAYS responsible for?</p>",
+      "answer": "<ul>    <li>The physical datacenter.</li>    <li>The physical network.</li>    <li>The physical hosts.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 6,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "The Shared Responsibility Model",
+      "prompt": "<p>Who's responsible for <b>Information and Data</b> in the shared responsibility model when using each of the following:</p><ul>    <li>SaaS</li>    <li>PaaS</li>    <li>IaaS</li>    <li>On-premises</li></ul>",
+      "answer": "<ul>    <li>SaaS: Cloud Consumer</li>    <li>PaaS: Cloud Consumer</li>    <li>IaaS: Cloud Consumer</li>    <li>On-premises: Cloud Consumer</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 7,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "The Shared Responsibility Model",
+      "prompt": "<p>Who's responsible for <b>Devices (Mobiles. PCs. etc)</b> in the shared responsibility model when using each of the following:</p><ul>    <li>SaaS</li>    <li>PaaS</li>    <li>IaaS</li>    <li>On-premises</li></ul>",
+      "answer": "<ul>    <li>SaaS: Cloud Consumer</li>    <li>PaaS: Cloud Consumer</li>    <li>IaaS: Cloud Consumer</li>    <li>On-premises: Cloud Consumer</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 8,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "The Shared Responsibility Model",
+      "prompt": "<p>Who's responsible for <b>Accounts and Identities</b> in the shared responsibility model when using each of the following:</p><ul>    <li>SaaS</li>    <li>PaaS</li>    <li>IaaS</li>    <li>On-premises</li></ul>",
+      "answer": "<ul>    <li>SaaS: Cloud Consumer</li>    <li>PaaS: Cloud Consumer</li>    <li>IaaS: Cloud Consumer</li>    <li>On-premises: Cloud Consumer</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 9,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "The Shared Responsibility Model",
+      "prompt": "<p>Who's responsible for <b>Identity and Directory Infrastructure</b> in the shared responsibility model when using each of the following:</p><ul>    <li>SaaS</li>    <li>PaaS</li>    <li>IaaS</li>    <li>On-premises</li></ul>",
+      "answer": "<ul>    <li>SaaS: Shared Responsibility</li>    <li>PaaS: Shared Responsibility</li>    <li>IaaS: Cloud Consumer</li>    <li>On-premises: Cloud Consumer</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 10,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "The Shared Responsibility Model",
+      "prompt": "<p>Who's responsible for <b>Applications</b> in the shared responsibility model when using each of the following:</p><ul>    <li>SaaS</li>    <li>PaaS</li>    <li>IaaS</li>    <li>On-premises</li></ul>",
+      "answer": "<ul>    <li>SaaS: Cloud Provider</li>    <li>PaaS: Shared Responsibility</li>    <li>IaaS: Cloud Consumer</li>    <li>On-premises: Cloud Consumer</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 11,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "The Shared Responsibility Model",
+      "prompt": "<p>Who's responsible for <b>Network Controls</b> in the shared responsibility model when using each of the following:</p><ul>    <li>SaaS</li>    <li>PaaS</li>    <li>IaaS</li>    <li>On-premises</li></ul>",
+      "answer": "<ul>    <li>SaaS: Cloud Provider</li>    <li>PaaS: Shared Responsibility</li>    <li>IaaS: Cloud Consumer</li>    <li>On-premises: Cloud Consumer</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 12,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "The Shared Responsibility Model",
+      "prompt": "<p>Who's responsible for <b>Operating System</b> in the shared responsibility model when using each of the following:</p><ul>    <li>SaaS</li>    <li>PaaS</li>    <li>IaaS</li>    <li>On-premises</li></ul>",
+      "answer": "<ul>    <li>SaaS: Cloud Provider</li>    <li>PaaS: Cloud Provider</li>    <li>IaaS: Cloud Consumer</li>    <li>On-premises: Cloud Consumer</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 13,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "The Shared Responsibility Model",
+      "prompt": "<p>Who's responsible for <b>Physical Hosts</b> in the shared responsibility model when using each of the following:</p><ul>    <li>SaaS</li>    <li>PaaS</li>    <li>IaaS</li>    <li>On-premises</li></ul>",
+      "answer": "<ul>    <li>SaaS: Cloud Provider</li>    <li>PaaS: Cloud Provider</li>    <li>IaaS: Cloud Provider</li>    <li>On-premises: Cloud Consumer</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 14,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "The Shared Responsibility Model",
+      "prompt": "<p>Who's responsible for <b>Physical Network</b> in the shared responsibility model when using each of the following:</p><ul>    <li>SaaS</li>    <li>PaaS</li>    <li>IaaS</li>    <li>On-premises</li></ul>",
+      "answer": "<ul>    <li>SaaS: Cloud Provider</li>    <li>PaaS: Cloud Provider</li>    <li>IaaS: Cloud Provider</li>    <li>On-premises: Cloud Consumer</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 15,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "The Shared Responsibility Model",
+      "prompt": "<p>Who's responsible for <b>Physical Datacenter</b> in the shared responsibility model when using each of the following:</p><ul>    <li>SaaS</li>    <li>PaaS</li>    <li>IaaS</li>    <li>On-premises</li></ul>",
+      "answer": "<ul>    <li>SaaS: Cloud Provider</li>    <li>PaaS: Cloud Provider</li>    <li>IaaS: Cloud Provider</li>    <li>On-premises: Cloud Consumer</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 16,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Models",
+      "prompt": "<p>Private Cloud</p>",
+      "answer": "<p>A cloud built. controlled. and maintained by a single entity.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 17,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Models",
+      "prompt": "<p>Advantages of Private Cloud</p>",
+      "answer": "<ul>    <li>Complete control over resources and security.</li>    <li>Data is not colocated with other organisations data</li></ul>",
+      "promptType": "Define"
+    },
+    {
+      "id": 18,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Models",
+      "prompt": "<p>Disadvantages of Private Cloud</p>",
+      "answer": "<ul>    <li>Upfront CapEx cost: hardware must be purchased for startup and maintenance.</li>    <li>Lacks the benefits of public cloud.</li></ul>",
+      "promptType": "Define"
+    },
+    {
+      "id": 19,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Models",
+      "prompt": "<p>Public Cloud</p>",
+      "answer": "<p>Is built. controlled. and maintained by a third-party cloud provider. Anyone that wants to purchase cloud services can access and use resources. This availability is a key difference between other cloud models.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 20,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Models",
+      "prompt": "<p>Advantages of Public Cloud</p>",
+      "answer": "<ul>    <li>No capital expenditures to scale up.</li>    <li>Applications can be quickly provisioned and deprovisioned.</li>    <li>Organizations pay only for what they use.</li></ul>",
+      "promptType": "Define"
+    },
+    {
+      "id": 21,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Models",
+      "prompt": "<p>Disadvantages of Public Cloud</p>",
+      "answer": "<ul>    <li>Organizations don't have complete control over resources and security.</li></ul>",
+      "promptType": "Define"
+    },
+    {
+      "id": 22,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Models",
+      "prompt": "<p>Hybrid Cloud</p>",
+      "answer": "<p>Uses both public and private cloud in an inter-connected environment.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 23,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Models",
+      "prompt": "<p>Some use cases for Hybrid Cloud</p>",
+      "answer": "<ul>    <li>Can be used to allow a private cloud to surge for increase. temporary demand by deploying public cloud resources.</li>    <li>Can be used to provide an extra layer of security.<br/>For example. users can flexibly choose which services to keep in public cloud and which to deploy to their private cloud infrastructure.</li></ul>",
+      "promptType": "Define"
+    },
+    {
+      "id": 24,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Models",
+      "prompt": "<p>Advantages of Hybrid Cloud</p>",
+      "answer": "<ul>    <li>Provides the most flexibility.</li>    <li>Organisations can determine where to run their applications.</li>    <li>.</li></ul>",
+      "promptType": "Define"
+    },
+    {
+      "id": 25,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Models",
+      "prompt": "<p>Disadvantages of Hybrid Cloud</p>",
+      "answer": "<ul>    <li>Complexity of Management & Implementation</li></ul>",
+      "promptType": "Define"
+    },
+    {
+      "id": 26,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Define Cloud Models",
+      "prompt": "<p>Multi-cloud</p>",
+      "answer": "<p>Uses features from many cloud providers. you deal with two (or more) public cloud providers and manage resources and security in both environments.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 27,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Describe the Consumption-based Model",
+      "prompt": "<p>Capital Expenditure (CapEx)</p>",
+      "answer": "<p>Typically a one-time. up-front expenditure to purchase or secure tangible resources.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 28,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Describe the Consumption-based Model",
+      "prompt": "<p>Operational Expenditure (OpEx)</p>",
+      "answer": "<p>Typically spending money on services or products over time.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 29,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Describe the Consumption-based Model",
+      "prompt": "<p>What are the two types of expenses to consider when comparing IT infrastructure models?</p>",
+      "answer": "<p>Capital Expenditure and Operational Expenditure</p>",
+      "promptType": "Question"
+    },
+    {
+      "id": 30,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Computing",
+      "topic": "Describe the Consumption-based Model",
+      "prompt": "<p>Benefits of the Consumption Based Model</p>",
+      "answer": "<ul>    <li>No upfront costs.</li>    <li>No need to purchase and manage costly infrastructure that users might not use to its fullest potential.</li>    <li>The ability to pay for more resources when they're needed.</li>    <li>The ability to stop paying for resources that are no longer needed.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 31,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of High Availability and Scalability",
+      "prompt": "<p>High Availability</p>",
+      "answer": "<p>Focuses on ensuring maximum uptime. regardless of disruptions or events that may occur. Solutions must account for service availability guarantees. These are part of the Service Level Agreements (SLAs).</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 32,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of High Availability and Scalability",
+      "prompt": "<p>Scalability</p>",
+      "answer": "<p>Refers to the ability to adjust resources to meet demand.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 33,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of High Availability and Scalability",
+      "prompt": "<p>Service Level Agreement (SLA)</p>",
+      "answer": "<p>A formal agreement between service provider and customer ensuring a certain level of service.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 34,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of High Availability and Scalability",
+      "prompt": "<p>How Azure represents its SLAs.</p>",
+      "answer": "<p>As a percentage of uptime for a service.</p>",
+      "promptType": "Question"
+    },
+    {
+      "id": 35,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of High Availability and Scalability",
+      "prompt": "<p>The two types of scalability and their meaning.</p>",
+      "answer": "<ul>    <li>Horizontal: Adding or subtracting from the total number of resources.</li>    <li>Vertical: Increasing the capabilities of exisiting resources.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 36,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of High Availability and Scalability",
+      "prompt": "<p>Horizontal Scaling</p>",
+      "answer": "<p>Adding or subtracting from the total number of resources.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 37,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of High Availability and Scalability",
+      "prompt": "<p>Vertical Scaling</p>",
+      "answer": "<p>Increasing the capabilities of exisiting resources.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 38,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of High Availability and Scalability",
+      "prompt": "<p>Benefits of scalability.</p>",
+      "answer": "<ul>    <li>Ability to adjust resources to meet demand.</li>    <li>Don't overpay for underutilised/overutilized services.</li>    <li>You only pay for what you use.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 39,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of Cloud",
+      "prompt": "<p>The seven major benefits of using cloud services.</p>",
+      "answer": "<ul>    <li>High Availability</li>    <li>Scalability</li>    <li>Reliability</li>    <li>Predictability</li>    <li>Security</li>    <li>Governance</li>    <li>Manageability</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 40,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of Reliability and Predictability",
+      "prompt": "<p>Reliability</p>",
+      "answer": "<p>The ability of a system to recover from failures and continue to function.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 41,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of Reliability and Predictability",
+      "prompt": "<p>At a high level. how does Azure ensure Reliability for its consumers?</p>",
+      "answer": "<p>A decentralised design enables Azure cloud to deploy resources and backups around the world. thereby enabling failover even when experiencing a catastrophic event in an entire region.</p>",
+      "promptType": "Question"
+    },
+    {
+      "id": 42,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of Reliability and Predictability",
+      "prompt": "<p>The two main focuses of Azure Cloud Predictability.</p>",
+      "answer": "<p>Performance. and Cost.</p>",
+      "promptType": "Question"
+    },
+    {
+      "id": 43,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of Reliability and Predictability",
+      "prompt": "<p>Examples of Azure services and features which support performance predictability.</p>",
+      "answer": "<ul>    <li>Autoscaling</li>    <li>Load Balancing</li>    <li>High Availability</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 44,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of Reliability and Predictability",
+      "prompt": "<p>Azure cloud tools that can estimate potential cloud spend.</p>",
+      "answer": "<ul>    <li>Total Cost of Ownership (TCO).</li>    <li>Pricing Calculator.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 45,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of Reliability and Predictability",
+      "prompt": "<p>How cloud supports cost predictability.</p>",
+      "answer": "<ul>    <li>Track resource use in real time.</li>    <li>Monitor resources to ensure efficeint use.</li>    <li>Apply data analytics to find patterns for planning better resource deployment.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 46,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of Reliability and Predictability",
+      "prompt": "<p>Cost Predictability</p>",
+      "answer": "<p>Focuses on predicting or forecasting the cost of the cloud spend.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 47,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of Security and Governance",
+      "prompt": "<p>Examples of how Azure enables sound Governance.</p>",
+      "answer": "<ul>    <li>Ability to set templates to ensure that all deployed resources meet corportate and government regulatory requirements.</li>    <li>Ability to update all deployed resources to new standards as they change.</li>    <li>Cloud-based auditing to flag resources which are out of compliance.</li>    <li>Automatic application of software patches and updates.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 48,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of Security and Governance",
+      "prompt": "<p>At a high level. how does Azure enable robust Security.</p>",
+      "answer": "<p>At a high level. how does Azure enable robust Security.</p><ul>    <li>Allows consumers to choose the level of security control (i.e. The IaaS model enables manual access to OS. software patches etc. whereas PaaS automatically takes care of updates for you).</li>    <li>Cloud providers are typically more well suited to handle common security events like Distributed Denial of Service (DDoS) attacks.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 49,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of Manageability",
+      "prompt": "<p>The two types of manageability for cloud computing.</p>",
+      "answer": "<ul>    <li>Management <b>of</b> the cloud: Managing your cloud environment and resources.</li>    <li>Management <b>in</b> the cloud: How you are able to manage your cloud environment and resources</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 50,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe the Benefits of Using Cloud Services",
+      "topic": "Benefits of Manageability",
+      "prompt": "<p>What tools are available to manage your cloud environment.</p>",
+      "answer": "<ul>    <li>Through the Web Portal.</li>    <li>Using a Command Line Interface.</li>    <li>Using APIs.</li>    <li>Using PowerShell.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 51,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Service Types",
+      "topic": "Describe Infrastructure as a Service",
+      "prompt": "<p>Infrastructure as a Service (IaaS)</p>",
+      "answer": "<p>Cloud provider is responsible for maintaining hardware. network connectivity. and physical security. <br /> The consumer is responsible for everything else.</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 52,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Service Types",
+      "topic": "Describe Infrastructure as a Service",
+      "prompt": "<p>Biggest benefit of IaaS</p>",
+      "answer": "<ul>    <li>Provides the most flexibility. the maximum amount of control for cloud resources.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 53,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Service Types",
+      "topic": "Describe Infrastructure as a Service",
+      "prompt": "<p>Scenarios in which IaaS is used.</p>",
+      "answer": "<ul>    <li>Lift and Shift migration: standing up cloud resources to migrate to.</li>    <li>You have established configs for development and test environments that need to rapidly replicate.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 54,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Service Types",
+      "topic": "Describe Platform as a Service",
+      "prompt": "<p>In Platform as a Service (PaaS). the cloud provider maintains:</p>",
+      "answer": "<ul>    <li>Physical infrastructure. security. and networks (inc. internet connection). and</li>    <li>The operating systems. databses. and development tools.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 55,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Service Types",
+      "topic": "Describe Platform as a Service",
+      "prompt": "<p>Biggest benefit of PaaS</p>",
+      "answer": "<p>Provides a complete development environment without the headache of maintaining all the development infrastructure.</p>",
+      "promptType": "Question"
+    },
+    {
+      "id": 56,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Service Types",
+      "topic": "Describe Platform as a Service",
+      "prompt": "<p>Scenarios in which PaaS is used.</p>",
+      "answer": "<ul>    <li>Development framework: PaaS provides a framework that developers can build upon to develop or customize cloud-based applications. PaaS lets developers create applications using built-in software components.</li>    <li>Analytics or business intelligence Tools provided as a service with PaaS allow organizations to analyze and mine their data. finding insights and patterns and predicting outcomes to improve forecasting. product design decisions. investment returns. and other business decisions.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 57,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Service Types",
+      "topic": "Describe Software as a Service",
+      "prompt": "<p>Software as a Service (SaaS)</p>",
+      "answer": "<p>The most complete cloud service model. from a product perspective. With SaaS. you're essentially renting or using a fully developed application. Email . financial software. messaging applications. and connectivity software are all common examples of a SaaS implementation</p>",
+      "promptType": "Define"
+    },
+    {
+      "id": 58,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Service Types",
+      "topic": "Describe Software as a Service",
+      "prompt": "<p>Biggest benefit of SaaS</p>",
+      "answer": "<p>While the SaaS model may be the least flexible. it's also the easiest to get up and running. It require the least amount of technical knowledge or expertise to fully employ.</p>",
+      "promptType": "Question"
+    },
+    {
+      "id": 59,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Service Types",
+      "topic": "Describe Software as a Service",
+      "prompt": "<p>In Software as a Service (SaaS). the cloud provider is responsible for:</p>",
+      "answer": "<ul>    <li>Everything apart from:</li>    <li>The data you put into the system.</li>    <li>The devices you allow to connect to the system. and the users that have access.</li></ul>",
+      "promptType": "Question"
+    },
+    {
+      "id": 60,
+      "certificate": "AZ-900: Microsoft Azure Fundamentals",
+      "section": "Describe Cloud Concepts",
+      "module": "Describe Cloud Service Types",
+      "topic": "Describe Software as a Service",
+      "prompt": "<p>Scenarios in which SaaS is used.</p>",
+      "answer": "<ul>    <li>Email and Messaging.</li>    <li>Business productivity applications.</li>    <li>Finance and expense tracking.</li></ul>",
+      "promptType": "Question"
+    }
+  ]
