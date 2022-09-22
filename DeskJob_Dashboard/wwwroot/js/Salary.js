@@ -104,7 +104,3 @@ function isPayWeek() {
     let isPayWeek = (currWeek % 2 != 1);
     return isPayWeek;
 }
-
-function wip() {
-    alert(`I'm working on it.`);
-}

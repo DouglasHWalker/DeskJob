@@ -23,7 +23,7 @@ function getWikiRequest() {
 }
 
 function showImageOfTheDay(data) {
-    document.getElementById("iotdCell").innerHTML = "<a href=" + data.image.file_page + "><img style='max-width: 80%; max-height: 220px;' src=" + data.image.image.source + " /></a>";
+    document.getElementById("iotdCell").innerHTML = "<a href=" + data.image.file_page + "><img style='max-width: 300px; max-height: 300px;' src=" + data.image.image.source + " /></a>";
     let datatext = data.image.description.text;
     if (datatext.length > 80) { datatext = datatext.slice(0, 75) + "..." }
     document.getElementById("iotdCreditCell").innerHTML = datatext;

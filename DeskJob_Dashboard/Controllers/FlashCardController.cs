@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DeskJob_Dashboard.Models;
+using System.IO;
+using System.ComponentModel;
+using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 
 namespace DeskJob_Dashboard.Controllers
 {
@@ -14,12 +18,25 @@ namespace DeskJob_Dashboard.Controllers
         // GET: FlashCardController
         public async Task<IActionResult> Index()
         {
-            var flashcards = new List<FlashCard>();
-
-            // This allows the home page to load if migrations have not been run yet.
+            List<FlashCard> flashcards = new List<FlashCard>();
             try
             {
-                // TODO: get relevant flashcards from file
+                using var reader = new StreamReader("wwwroot\\flashcards.json");
+                flashcards = JsonConvert.DeserializeObject<List<FlashCard>>(reader.ReadToEnd());
+
+                //var flashcard = new FlashCard()
+                //{
+                //    ID = id,
+                //    Certificate = values[0],
+                //    Section = values[1],
+                //    Module = values[2],
+                //    Topic = values[3],
+                //    Prompt = values[4],
+                //    Answer = values[5],
+                //    PromptType = values[6],
+                //};
+
+                Shuffle(flashcards);
             }
             catch (Exception e)
             {
@@ -28,6 +45,22 @@ namespace DeskJob_Dashboard.Controllers
             }
 
             return View(flashcards);
+        }
+
+        //Utility Functions
+
+        public void Shuffle(List<FlashCard> list)
+        {
+            Random rng = new Random();
+            int n = list.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                FlashCard value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
         }
     }
 }

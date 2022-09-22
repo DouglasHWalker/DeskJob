@@ -7,7 +7,7 @@
 <style>
     .fullScreen {
         /*transform: scale(0.2) translateY(-150vh);*/
-        transform: translateY(100vh);
+        transform: translateY(-100vh);
     }
 
     #news td {
@@ -86,10 +86,51 @@
     </header>
 
     <div class="main_content">
-        @*------------------- Hacker News Table ------------------*@
-        <div class="blade" style="padding-left: 0">
+        @*--------------- Wikipedia ------------------*@
+       <div class="blade" style="display: none;">
             <div class="wikipedia">
-                <div style="overflow-x: scroll;overflow-x: hidden; padding-left: 0">
+                <h2 style="color: white">Wikipedia</h2>
+                <table id="wikipedia">
+                </table>
+            </div>
+        </div>
+
+        @*--------------- Resources ------------------*@
+        <div class="blade" style="max-height: 500px; padding-left: 0">
+            <div class="wikipedia">
+                @*<h4 style="color: white">Resources</h4>*@
+                <table>
+                    <tr><th>DXC Links</th></tr>
+                    <tr><td><a href="https://csc100.csc.com/irj/portal" target="_blank">Pay Slips - Employee Self Service</a></td></tr>
+                    <tr><td><a href="https://etes.csc.com/iTES/Loginframe.asp" target="_blank">Timesheets</a></td></tr>
+                    <tr><th><br/></th></tr>
+                    <tr><th>Step Challenge</th></tr>
+                    <tr><td><a href="https://wellbeinghub.dxc.com/challenges/leaderboard/index.jsp?id=4" target="_blank">Leaderboard</td></tr>
+                    <tr><td><a href="https://wellbeinghub.dxc.com/my/day/" target="_blank">Update steps</a></td></tr>
+                </table>
+            </div>
+        </div>
+
+        @*--------------- Certification ------------------*@
+        <div class="blade" style="max-height: 500px;">
+            <div class="wikipedia">
+                @*<h4 style="color: white">Resources</h4>*@
+                <table>
+                    <tr><th>Microsoft Certifications</th></tr>
+                    <tr><td><a href="https://learn.microsoft.com/en-us/training/browse/" target="_blank">Microsoft Learn - Official Material<a></td></tr>
+                    <tr><td><a href="https://esi.microsoft.com/getcertification" target="_blank">Official Practice Exams (Free) - Microsoft ESI</a></td></tr>
+                    <tr><td><a href="https://esi.microsoft.com/getcertification" target="_blank">Schedule Exam</a></td></tr>
+                    <tr><th><br /></th></tr>
+                    <tr><th>AZ-900 - Microsoft Azure Fundamentals</th></tr>
+                    <tr><td><a href="FlashCard" target="_blank">Bespoke Flashcards</a></td></tr>
+                </table>
+            </div>
+        </div>
+       
+        @*------------------- Hacker News Table ------------------*@
+        <div class="blade" style="overflow-x: scroll;overflow-x: hidden; padding-left: 0">
+            <div class="wikipedia">
+                <div >
                     <table id="news">
                         <tr>
                             <th>news.ycombinator.com</th>
@@ -98,18 +139,18 @@
                 </div>
             </div>
         </div>
+
         @*--------------- Resources ------------------*@
-        <div class="blade" style="max-height: 300px; overflow-x: hidden; overflow-y: scroll;">
+      @*  <div class="blade" style="max-height: 300px; overflow-x: hidden; overflow-y: scroll; padding-left: 0">
             <div class="wikipedia">
-                @*<h2 style="color: white">Wikipedia</h2>*@
+                <h2 style="color: white">Wikipedia</h2>
                 <table>
                     <tr>
                         <th>Assessment</th>
                         <th>Due</th>
-                        <th>% total</th>
                     </tr>
                     <tr>
-                        @*<td>Taking on a Microsoft Certification? - <a href="https://esi.microsoft.com/getcertification">Start here.</a></td>*@
+                        <td>Taking on a Microsoft Certification? - <a href="https://esi.microsoft.com/getcertification">Start here.</a></td>
                         <td>Industry Certification</td>
                         <td>31st Oct </td>
                         <td>10%</td>
@@ -182,25 +223,18 @@
                     </tr>
                 </table>
             </div>
-        </div>
-        @*--------------- Wikipedia ------------------*@
-        <div class="blade" style="padding-left: 0">
-            <div class="wikipedia">
-                @*<h2 style="color: white">Wikipedia</h2>*@
-                <table id="wikipedia">
-                </table>
-            </div>
-        </div>
+        </div>*@
+
         @*------------------- Image of the Day ------------------*@
         <div class="blade">
             <div class="wikipedia">
                 <div style="overflow-x: scroll;overflow-x: hidden;">
                     <table id="news">
                         <tr>
-                            <td id="iotdCell" style="max-width: 80%; max-height: 300px;"></td>
+                            <td id="iotdCell" style="max-width: 400px; max-height: 400px;"></td>
                         </tr>
                         <tr>
-                            <th style="font-size: small; padding-top: 4px" id="iotdCreditCell"></th>
+                            <th style="font-size: small; padding-top: 4px; display: none;" id="iotdCreditCell"></th>
                         </tr>
                     </table>
                 </div>
