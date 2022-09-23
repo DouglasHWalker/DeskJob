@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
 <div class="flashcard-page-container">
-
+    <!-- todo: #47 add dropdowns for certificate, section, module    -->
     <div class="flashcard-container">
         @*- card header -----------------------------------*@
         <div class="card-info">
@@ -17,6 +17,9 @@
             </span>
             <span class="card-info-subtitle">
                 @Model.FirstOrDefault().Section
+            </span>
+            <span class="card-info-subtitle">
+                @Model.FirstOrDefault().Module
             </span>
         </div>
 
@@ -80,16 +83,19 @@
     }
 
     function nextCard() {
-        completedCount++;
-
+        // check if done
         if (cards.length == 0) {
             alert("congratulations");
             return;
         }
 
+        // TODO: #46 Change card traversal so that cards are kept in memory
+        completedCount++;
+
         current_card = cards.shift();
         document.getElementsByClassName("card-info-title")[0].innerHTML = current_card.certificate;
         document.getElementsByClassName("card-info-subtitle")[0].innerHTML = current_card.section;
+        document.getElementsByClassName("card-info-subtitle")[1].innerHTML = current_card.module;
         document.getElementsByClassName("card-title")[0].innerHTML = current_card.topic;
         document.getElementById("prompt").innerHTML = "<span>" + current_card.promptType + " " + current_card.prompt + "</span>";
         document.getElementById("answer").innerHTML = "<span>" + current_card.answer + "</span>";
