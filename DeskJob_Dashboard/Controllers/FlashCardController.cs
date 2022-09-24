@@ -24,6 +24,13 @@ namespace DeskJob_Dashboard.Controllers
                 using var reader = new StreamReader("wwwroot\\flashcards.json");
                 flashcards = JsonConvert.DeserializeObject<List<FlashCard>>(reader.ReadToEnd());
 
+                //int id = 0;
+                //foreach (FlashCard flashcard in flashcards)
+                //{
+                //    flashcard.ID = id;
+                //    id++;
+                //}
+
                 //var flashcard = new FlashCard()
                 //{
                 //    ID = id,
