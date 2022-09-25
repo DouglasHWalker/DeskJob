@@ -54,6 +54,43 @@ namespace DeskJob_Dashboard.Controllers
             return View(flashcards);
         }
 
+        // GET: FlashCardController
+        public async Task<IActionResult> Flashboard()
+        {
+            List<FlashCard> flashcards = new List<FlashCard>();
+            try
+            {
+                using var reader = new StreamReader("wwwroot\\flashcards.json");
+                flashcards = JsonConvert.DeserializeObject<List<FlashCard>>(reader.ReadToEnd());
+
+                //int id = 0;
+                //foreach (FlashCard flashcard in flashcards)
+                //{
+                //    flashcard.ID = id;
+                //    id++;
+                //}
+
+                //var flashcard = new FlashCard()
+                //{
+                //    ID = id,
+                //    Certificate = values[0],
+                //    Section = values[1],
+                //    Module = values[2],
+                //    Topic = values[3],
+                //    Prompt = values[4],
+                //    Answer = values[5],
+                //    PromptType = values[6],
+                //};
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return View(flashcards);
+            }
+
+            return View(flashcards); // .Take(5).ToList()
+        }
+
         //Utility Functions
 
         public void Shuffle(List<FlashCard> list)
