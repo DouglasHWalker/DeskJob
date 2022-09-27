@@ -128,6 +128,21 @@
         font-size: 12px;
     }
 
+    :root {
+        --card-min-width: 360px;
+        --card-height: 500px;
+    }
+
+    @@media only screen and (min-width: 600px) {
+        :root {
+            --card-min-width: 480px;
+            --card-height: 600px;
+        }
+        .flashcard-container {
+            font-size: 1rem;
+        }
+    }
+
     .flashcard-page-container {
         width: 100vw;
         height: 100vh;
@@ -141,8 +156,7 @@
     }
 
     .flashcard-container {
-        width: 480px;
-        height: 597px;
+        min-width: var(--card-min-width);
         flex-grow: 0;
         display: flex;
         flex-direction: column;
@@ -155,7 +169,7 @@
 
     /*Card info header*/
     .card-info {
-        width: 480px;
+        width: var(--card-min-width);
         flex-grow: 0;
         display: flex;
         flex-direction: column;
@@ -182,20 +196,20 @@
     .card-info-subtitle {
         flex-grow: 0;
         font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 300;
         font-stretch: normal;
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        text-align: center;
+        text-align: left;
         color: #fff;
     }
 
     /*card-frame*/
     .card-frame {
-        width: 480px;
-        height: 512px;
+        width: var(--card-min-width);
+        height: calc(var(--card-height) - 60px);
         flex-grow: 0;
         display: flex;
         flex-direction: column;
@@ -208,7 +222,7 @@
     }
 
     .Card-Header {
-        width: 480px;
+        width: 100%;
         height: 50px;
         flex-grow: 0;
         display: flex;
@@ -224,7 +238,7 @@
         line-height: 100%;
         flex-grow: 0;
         font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: normal;
         font-stretch: normal;
         font-style: normal;
@@ -238,7 +252,7 @@
     .card-count {
         flex-grow: 0;
         font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: normal;
         font-stretch: normal;
         font-style: normal;
@@ -288,7 +302,7 @@
 
     /*Submit Buttons*/
     .Submit-Buttons {
-        width: 480px;
+        width: 100%;
         height: 62px;
         flex-grow: 0;
         display: flex;
@@ -309,7 +323,6 @@
         padding: 0;
         cursor: pointer;
         transition: 0.4s linear;
-        background-color: #393939;
     }
 
     .negative {
@@ -317,7 +330,7 @@
     }
 
         .negative:hover {
-            background-color: #c67171;
+            background-color: rgb(104, 0, 0);
         }
 
 
@@ -334,7 +347,7 @@
     }
 
         .positive:hover {
-            background-color: #51D93D;
+            background-color: rgb(30, 87, 0);
         }
 
         .positive span {
