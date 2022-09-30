@@ -609,6 +609,10 @@
     "answer": "<ul>    <li>Email and Messaging.</li>    <li>Business productivity applications.</li>    <li>Finance and expense tracking.</li></ul>",
     "promptType": "Question"
   },
+
+
+
+
   {
     "id": 61,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
@@ -616,7 +620,7 @@
     "module": "Describe Core Architectural Components",
     "topic": "Azure Accounts",
     "prompt": "<p>What is the Heirarchy of Azure Account Components</p>",
-    "answer": "<ul><li>Account (Tenant)</li><li>Subscription/s</li><li>Resource Group/s</li><li>Resource/s</li></ul>",
+    "answer": "<ul><li>Account (Tenant)</li><li>Management Groups</li><li>Subscription/s</li><li>Resource Group/s</li><li>Resource/s</li></ul>",
     "promptType": "Question"
   },
   {
@@ -766,7 +770,7 @@
     "module": "Describe Core Architectural Components",
     "topic": "Management Infrastructure",
     "prompt": "<p>Components of the Azure Management Infrastructure</p>",
-    "answer": "<ul><li>Azure Resources</li><li>Resource Groups</li><li>Subscriptions</li><li>Accounts</li></ul>",
+    "answer": "<ul><li>Azure Resources</li><li>Resource Groups</li><li>Subscriptions</li><li>Management Groups</li><li>Accounts</li></ul>",
     "promptType": "Define"
   },
   {
@@ -857,6 +861,141 @@
     "topic": "Management Infrastructure",
     "prompt": "<p>Why would you create multiple subscriptions? (3 points)</p>",
     "answer": "<ul><li>To set up different environments for testing, security, or compliance.</li><li>To reflect organisational structures: limiting some departments but not others</li><li>To easily track costs across needs (production, testing, development)</li></ul>",
+    "promptType": "Question"
+  },
+  {
+    "id": 86,
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Core Architectural Components",
+    "topic": "Management Infrastructure",
+    "prompt": "<p>Management Group</p>",
+    "answer": "<p>A management container for subscriptions that enable governance conditions. All the sub- components, right down to the resources inherity the conditions applied to management groups. These groups can be nested.</p>",
+    "promptType": "Define"
+  },
+  {
+    "id": 87,
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Core Architectural Components",
+    "topic": "Management Infrastructure",
+    "prompt": "<p>An example of when you would use Management Groups</p>",
+    "answer": "<ul><li>Create heirarchy that applies policy: limiting VM locations to a specific region called production.</li><li>Provide cloud users access to multiple subscriptions: by moving the subscriptions under a single management group and using RBAC to assign them to a user, all sub-components, down to the resource, will inherit this access assignment.</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "id": 88,
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Core Architectural Components",
+    "topic": "Management Infrastructure",
+    "prompt": "<p>Maximum number of Management Groups in single directory</p>",
+    "answer": "<p>10,000 are supported in a single directory.</p>",
+    "promptType": "Define"
+  },
+  {
+    "id": 89,
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Core Architectural Components",
+    "topic": "Management Infrastructure",
+    "prompt": "<p>Maximum nesting for Management Groups</p>",
+    "answer": "<p>The Management Groups tree can support up to six levels of depth.</p>",
+    "promptType": "Question"
+  },
+  {
+    "id": 90,
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Core Architectural Components",
+    "topic": "Management Infrastructure",
+    "prompt": "<p>How many parents groups can each management group and subscription have?</p>",
+    "answer": "<p>Management groups and subscriptions can suppport only one parent.</p>",
+    "promptType": "Question"
+  },
+
+
+
+
+
+  {
+    "id": 91,
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Virtual Machines",
+    "prompt": "<p>Azure Virtual Machines are considered to be what kind of cloud service type?</p>",
+    "answer": "<p>Virtual machines are considered to be Infrastructure as a Service (IaaS).</p>",
+    "promptType": "Question"
+  },
+  {
+    "id": 92,
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Virtual Machines",
+    "prompt": "<p>When are Virtual Machines the ideal choice?</p>",
+    "answer": "<p>They are the ideal choice when you want:</p><ul><li>Total control over the operating system (OS)</li><li>The ability to run custom software</li><li>To use custom hosting configurations</li></ul>",
+    "promptType": "Question"
+  },
+  {
+    "id": 93,
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Virtual Machines",
+    "prompt": "<p>The two types of VM scale groupings</p>",
+    "answer": "<ul><li>Scale Sets: Create and manage a group of identical, load balanced VMs</li><li>Availability Sets: built for high availability, enables staggered updates by grouping VMs in two ways: Update domains, and Fault domains.</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "id": 94,
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Virtual Machines",
+    "prompt": "<p>Scale Sets</p>",
+    "answer": "<ul><li>Create and manage a group of identical, load balanced VMs</li><li>Automates setup of virtual networks and load monitoring.</li><li>Centrally manage, configure, and update groups of VMs quickly</li><li>Automatically increase or decrease to meet demand or based on defined schedule.</li><li>Useful for large scale service for areas such as compute, big data, and container workloads.</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "id": 95,
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Virtual Machines",
+    "prompt": "<p>Availability Sets and their two groupings</p>",
+    "answer": "<p>Build a more resilient, highly available VM environement group using two methods:</p><ul><li>Update Domain: VMs are grouped so that they are rebooted at the same time, enabling updates to be staggered over these groups (each group gets 30 min to recover before moving to next).</li><li>Fault domain: groups VMs by common power source and network switch. This options by default creates three fault domains.</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "id": 96,
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Virtual Machines",
+    "prompt": "<p>How much does it cost to create an availability set?</p>",
+    "answer": "<p>There is no additional cost for configuration. You only pay for the VMs that you create.</p>",
+    "promptType": "Question"
+  },
+  {
+    "id": 96,
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Virtual Machines",
+    "prompt": "<p>Examples of when to use VMs</p>",
+    "answer": "<p>They can be used:</p><ul><li>To move operations to the cloud</li><li>During testing and development to quickly create different OS and application configurations.</li><li>To run applications in the cloud.</li><li>To extending your an existing datacenter to the cloud</li><li>During disaster recovery to for example run mission critical applications until the primary infrastructure becomes operational</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "id": 97,
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Virtual Machines",
+    "prompt": "<p>What primary configuration options are available when provisioning a VM?</p>",
+    "answer": "<ul><li>Size: purpose, number of processor core, amount of RAM.</li><li>Storage Disks: hard disk drives, solid state drives</li><li>Networking: virtual network, public IP address, port configuration</li></ul>",
     "promptType": "Question"
   }
 ]
