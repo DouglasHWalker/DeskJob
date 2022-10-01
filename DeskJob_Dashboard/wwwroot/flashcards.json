@@ -612,7 +612,7 @@
     "module": "Describe Core Architectural Components",
     "topic": "Physical Infrastructure",
     "prompt": "<p>What is the minimum number of availability zones in a zone-enabled region?</p>",
-    "answer": "<p>A minimum of three are set yp to ensure resiliency. Not all regions support them.</p>",
+    "answer": "<p>A minimum of three are set up to ensure resiliency. Not all regions support them.</p>",
     "promptType": "Question"
   },
   {

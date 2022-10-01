@@ -86,6 +86,7 @@
     window.onload = (event) => {
         //UpdateDOM_CardInfoDropdown('certificate');
         document.getElementById("ddl_certificate").value = "All";
+        Lock_CardInfoDropdown(document.getElementById("ddl_certificate"));
     }
 
 
@@ -161,6 +162,7 @@
                 Lock_CardInfoDropdown(document.getElementById("ddl_certificate"));
 
                 Unlock_CardInfoDropdown(document.getElementById("ddl_module"));
+                Update_CardInfoDropdown_IfNotLocked(current_card.module, "ddl_module");
                 break;
             case "module":
                 Unlock_CardInfoDropdown(document.getElementById("ddl_certificate"));
@@ -303,6 +305,10 @@
 
     .locked {
         color: rgb(226, 131, 207);
+    }
+
+    .locked option {
+        color: white;
     }
 
     /*card-frame*/
