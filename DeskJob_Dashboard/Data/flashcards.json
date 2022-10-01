@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -10,7 +9,6 @@
     "promptType": "Question"
   },
   {
-    "id": 2,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -20,17 +18,15 @@
     "promptType": "Define"
   },
   {
-    "id": 3,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
     "topic": "The Shared Responsibility Model",
     "prompt": "<p>In the shared responsibility model. what is the cloud consumer/customer ALWAYS responsible for?</p>",
-    "answer": "\"\t<ul>    <li>Information and Data: stored in the cloud.</li>    <li>Devices (Mobile and PCs): allowed to connect to the cloud.</li>    <li>Accounts and Identities: of people services and devices within your organisation.</li></ul>\"",
+    "answer": "\"\t<ul>    <li>Information and Data: stored in the cloud.</li>    <li>Devices (Mobile and PCs): allowed to connect to the cloud.</li>    <li>Accounts and Identities: of people services and devices within your organisation.</li></ul>",
     "promptType": "Question"
   },
   {
-    "id": 4,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -40,7 +36,6 @@
     "promptType": "Question"
   },
   {
-    "id": 5,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -50,7 +45,6 @@
     "promptType": "Question"
   },
   {
-    "id": 6,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -60,7 +54,6 @@
     "promptType": "Question"
   },
   {
-    "id": 7,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -70,7 +63,6 @@
     "promptType": "Question"
   },
   {
-    "id": 8,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -80,7 +72,6 @@
     "promptType": "Question"
   },
   {
-    "id": 9,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -90,7 +81,6 @@
     "promptType": "Question"
   },
   {
-    "id": 10,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -100,7 +90,6 @@
     "promptType": "Question"
   },
   {
-    "id": 12,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -110,7 +99,6 @@
     "promptType": "Question"
   },
   {
-    "id": 13,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -120,7 +108,6 @@
     "promptType": "Question"
   },
   {
-    "id": 14,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -130,7 +117,6 @@
     "promptType": "Question"
   },
   {
-    "id": 15,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -140,7 +126,6 @@
     "promptType": "Question"
   },
   {
-    "id": 16,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -150,7 +135,6 @@
     "promptType": "Define"
   },
   {
-    "id": 16,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -160,7 +144,6 @@
     "promptType": "Question"
   },
   {
-    "id": 17,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -170,7 +153,6 @@
     "promptType": "Define"
   },
   {
-    "id": 18,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -180,7 +162,6 @@
     "promptType": "Define"
   },
   {
-    "id": 19,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -190,7 +171,6 @@
     "promptType": "Define"
   },
   {
-    "id": 20,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -200,7 +180,6 @@
     "promptType": "Define"
   },
   {
-    "id": 21,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -210,7 +189,6 @@
     "promptType": "Define"
   },
   {
-    "id": 22,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -220,7 +198,6 @@
     "promptType": "Define"
   },
   {
-    "id": 23,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -230,7 +207,6 @@
     "promptType": "Define"
   },
   {
-    "id": 24,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -240,7 +216,6 @@
     "promptType": "Define"
   },
   {
-    "id": 25,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -250,7 +225,6 @@
     "promptType": "Define"
   },
   {
-    "id": 26,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -260,7 +234,6 @@
     "promptType": "Define"
   },
   {
-    "id": 27,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -270,7 +243,6 @@
     "promptType": "Define"
   },
   {
-    "id": 28,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -280,7 +252,6 @@
     "promptType": "Define"
   },
   {
-    "id": 29,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -290,7 +261,6 @@
     "promptType": "Question"
   },
   {
-    "id": 30,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -300,7 +270,6 @@
     "promptType": "Question"
   },
   {
-    "id": 30,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Computing",
@@ -310,7 +279,6 @@
     "promptType": "Question"
   },
   {
-    "id": 31,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -320,7 +288,6 @@
     "promptType": "Define"
   },
   {
-    "id": 32,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -330,7 +297,6 @@
     "promptType": "Define"
   },
   {
-    "id": 33,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -340,7 +306,6 @@
     "promptType": "Define"
   },
   {
-    "id": 34,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -350,7 +315,6 @@
     "promptType": "Question"
   },
   {
-    "id": 35,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -360,7 +324,6 @@
     "promptType": "Question"
   },
   {
-    "id": 36,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -370,7 +333,6 @@
     "promptType": "Define"
   },
   {
-    "id": 37,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -380,7 +342,6 @@
     "promptType": "Define"
   },
   {
-    "id": 38,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -390,7 +351,6 @@
     "promptType": "Question"
   },
   {
-    "id": 39,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -400,7 +360,6 @@
     "promptType": "Question"
   },
   {
-    "id": 40,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -410,7 +369,6 @@
     "promptType": "Define"
   },
   {
-    "id": 41,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -420,7 +378,6 @@
     "promptType": "Question"
   },
   {
-    "id": 42,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -430,7 +387,6 @@
     "promptType": "Question"
   },
   {
-    "id": 43,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -440,7 +396,6 @@
     "promptType": "Question"
   },
   {
-    "id": 44,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -450,7 +405,6 @@
     "promptType": "Question"
   },
   {
-    "id": 45,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -460,7 +414,6 @@
     "promptType": "Question"
   },
   {
-    "id": 46,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -470,7 +423,6 @@
     "promptType": "Define"
   },
   {
-    "id": 47,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -480,7 +432,6 @@
     "promptType": "Question"
   },
   {
-    "id": 48,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -490,7 +441,6 @@
     "promptType": "Question"
   },
   {
-    "id": 49,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -500,7 +450,6 @@
     "promptType": "Question"
   },
   {
-    "id": 50,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe the Benefits of Using Cloud Services",
@@ -510,7 +459,6 @@
     "promptType": "Question"
   },
   {
-    "id": 51,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Service Types",
@@ -520,7 +468,6 @@
     "promptType": "Define"
   },
   {
-    "id": 52,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Service Types",
@@ -530,7 +477,6 @@
     "promptType": "Question"
   },
   {
-    "id": 53,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Service Types",
@@ -540,7 +486,6 @@
     "promptType": "Question"
   },
   {
-    "id": 54,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Service Types",
@@ -550,7 +495,6 @@
     "promptType": "Question"
   },
   {
-    "id": 55,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Service Types",
@@ -560,7 +504,6 @@
     "promptType": "Question"
   },
   {
-    "id": 56,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Service Types",
@@ -570,7 +513,6 @@
     "promptType": "Question"
   },
   {
-    "id": 57,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Service Types",
@@ -580,7 +522,6 @@
     "promptType": "Define"
   },
   {
-    "id": 58,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Service Types",
@@ -590,7 +531,6 @@
     "promptType": "Question"
   },
   {
-    "id": 59,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Service Types",
@@ -600,7 +540,6 @@
     "promptType": "Question"
   },
   {
-    "id": 60,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Cloud Concepts",
     "module": "Describe Cloud Service Types",
@@ -614,7 +553,6 @@
 
 
   {
-    "id": 61,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -624,7 +562,6 @@
     "promptType": "Question"
   },
   {
-    "id": 62,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -634,7 +571,6 @@
     "promptType": "Question"
   },
   {
-    "id": 63,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -644,7 +580,6 @@
     "promptType": "Question"
   },
   {
-    "id": 64,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -654,7 +589,6 @@
     "promptType": "Define"
   },
   {
-    "id": 65,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -664,7 +598,6 @@
     "promptType": "Define"
   },
   {
-    "id": 66,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -674,7 +607,6 @@
     "promptType": "Define"
   },
   {
-    "id": 67,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -684,7 +616,6 @@
     "promptType": "Question"
   },
   {
-    "id": 68,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -694,7 +625,6 @@
     "promptType": "Question"
   },
   {
-    "id": 69,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -704,7 +634,6 @@
     "promptType": "Question"
   },
   {
-    "id": 70,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -714,7 +643,6 @@
     "promptType": "Define"
   },
   {
-    "id": 71,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -724,7 +652,6 @@
     "promptType": "Define"
   },
   {
-    "id": 72,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -734,7 +661,6 @@
     "promptType": "Define"
   },
   {
-    "id": 73,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -744,7 +670,6 @@
     "promptType": "Define"
   },
   {
-    "id": 74,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -754,7 +679,6 @@
     "promptType": "Define"
   },
   {
-    "id": 75,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -764,7 +688,6 @@
     "promptType": "Define"
   },
   {
-    "id": 76,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -774,7 +697,6 @@
     "promptType": "Define"
   },
   {
-    "id": 77,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -784,7 +706,6 @@
     "promptType": "Define"
   },
   {
-    "id": 78,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -794,7 +715,6 @@
     "promptType": "Define"
   },
   {
-    "id": 79,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -804,7 +724,6 @@
     "promptType": "Question"
   },
   {
-    "id": 80,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -814,7 +733,6 @@
     "promptType": "Define"
   },
   {
-    "id": 81,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -824,7 +742,6 @@
     "promptType": "Question"
   },
   {
-    "id": 82,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -834,7 +751,6 @@
     "promptType": "Question"
   },
   {
-    "id": 83,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -844,7 +760,6 @@
     "promptType": "Question"
   },
   {
-    "id": 84,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -854,7 +769,6 @@
     "promptType": "Define"
   },
   {
-    "id": 85,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -864,7 +778,6 @@
     "promptType": "Question"
   },
   {
-    "id": 86,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -874,7 +787,6 @@
     "promptType": "Define"
   },
   {
-    "id": 87,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -884,7 +796,6 @@
     "promptType": "Define"
   },
   {
-    "id": 88,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -894,7 +805,6 @@
     "promptType": "Define"
   },
   {
-    "id": 89,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -904,7 +814,6 @@
     "promptType": "Question"
   },
   {
-    "id": 90,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Core Architectural Components",
@@ -919,7 +828,6 @@
 
 
   {
-    "id": 91,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Compute and Networking Services",
@@ -929,7 +837,6 @@
     "promptType": "Question"
   },
   {
-    "id": 92,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Compute and Networking Services",
@@ -939,7 +846,6 @@
     "promptType": "Question"
   },
   {
-    "id": 93,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Compute and Networking Services",
@@ -949,7 +855,6 @@
     "promptType": "Define"
   },
   {
-    "id": 94,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Compute and Networking Services",
@@ -959,7 +864,6 @@
     "promptType": "Define"
   },
   {
-    "id": 95,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Compute and Networking Services",
@@ -969,7 +873,6 @@
     "promptType": "Define"
   },
   {
-    "id": 96,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Compute and Networking Services",
@@ -979,7 +882,6 @@
     "promptType": "Question"
   },
   {
-    "id": 96,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Compute and Networking Services",
@@ -989,13 +891,131 @@
     "promptType": "Define"
   },
   {
-    "id": 97,
     "certificate": "AZ-900: Microsoft Azure Fundamentals",
     "section": "Describe Azure Architecture and Services",
     "module": "Describe Compute and Networking Services",
     "topic": "Azure Virtual Machines",
     "prompt": "<p>What primary configuration options are available when provisioning a VM?</p>",
     "answer": "<ul><li>Size: purpose, number of processor core, amount of RAM.</li><li>Storage Disks: hard disk drives, solid state drives</li><li>Networking: virtual network, public IP address, port configuration</li></ul>",
+    "promptType": "Question"
+  },
+
+
+  {
+    "certificate": "Clean Architecture - Robert C. Martin",
+    "section": "Components",
+    "module": "Component Coupling",
+    "topic": "The Acyclic Dependencies Principle",
+    "prompt": "<p>How can we break the cycles in a dependency graph?</p>",
+    "answer": "<ol><li>Apply the Dependency Inversion Principle.</li><li>Create a new component that both objects inherit from.</li></ol>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "Clean Architecture - Robert C. Martin",
+    "section": "Components",
+    "module": "Component Coupling",
+    "topic": "Top Down Design",
+    "prompt": "<p>Component Diagrams are a map to what two features of a system?</p>",
+    "answer": "<ol><li>Buildability.</li><li>Maintainability.</li></ol>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "Clean Architecture - Robert C. Martin",
+    "section": "Components",
+    "module": "Component Coupling",
+    "topic": "Principles",
+    "prompt": "<p>Define The Stable Dependencies Principle.</p>",
+    "answer": "<p><i>Depend in the direction of stability.</i> Modules that are intended to be easy to change should not depend on modules which are harder to change.</p>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "Clean Architecture - Robert C. Martin",
+    "section": "Components",
+    "module": "Component Coupling",
+    "topic": "The Stable Dependencies Principle.",
+    "prompt": "<p>What is meant by stability?</p>",
+    "answer": "<p>A module is said to be stable if it is not easily changed. <i>Highly depended apon comonents are stable because it is difficult to change them</i></p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "Clean Architecture - Robert C. Martin",
+    "section": "Components",
+    "module": "Component Coupling",
+    "topic": "The Stable Dependencies Principle",
+    "prompt": "<p>The three stability metrics.</p>",
+    "answer": "<ul><li><i>Fan-in</i>: The number of classes <b>inside</b> a component that depend on classes inside the component.</li><li><i>Fan-out</i>: The number of classes <b>outside</b> a component that depend on classes outside the component.</li><li>Instability - <i>I = Fan-out - (Fan-in + Fan-out)</i>. A I vlaue of 1 indicates a maximally unstable component.</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "Clean Architecture - Robert C. Martin",
+    "section": "Components",
+    "module": "Component Coupling",
+    "topic": "The Stable Dependencies Principle",
+    "prompt": "<p>Where should we place unstable components in the component diagram and why?</p>",
+    "answer": "<p>At the top, because arrows pointing up would then violate SDP and ADP</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "Clean Architecture - Robert C. Martin",
+    "section": "Components",
+    "module": "Component Coupling",
+    "topic": "The Stable Dependencies Principle",
+    "prompt": "<p>How can we fix an unavoidable violation of the SDP?</p>",
+    "answer": "<p>Using the Dependence Inversion Principle (DIP).<br/>By creating an component and interface for the instable component classes we can make the stable class use the dependency without breaking SDP.</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "Clean Architecture - Robert C. Martin",
+    "section": "Components",
+    "module": "Component Coupling",
+    "topic": "Principles",
+    "prompt": "<p>Define The Stable Abstractions Principle (SAP)</p>",
+    "answer": "<p>A component should be as abstract as it is stable.</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "Clean Architecture - Robert C. Martin",
+    "section": "Components",
+    "module": "Component Coupling",
+    "topic": "The Stable Abstractions Principle",
+    "prompt": "<p>Where should we put high level policy?</p>",
+    "answer": "<p>High level policy should be maximally stable. However, it should also be easily extendible and this is achieved using the OCP. Open for extension, closed for modification. The type of classes that are best suited to these contraints are <i>abstract classes</i>.</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "Clean Architecture - Robert C. Martin",
+    "section": "Components",
+    "module": "Component Coupling",
+    "topic": "The Stable Abstractions Principle",
+    "prompt": "<p>Which component principle is acheived through the combination of SDP and SAP?</p>",
+    "answer": "<p>The DIP principle is achieved, as the reuslt is that <i> dependencies run in the direcction of abstraction</i>.</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "Clean Architecture - Robert C. Martin",
+    "section": "Components",
+    "module": "Component Coupling",
+    "topic": "The Stable Abstractions Principle",
+    "prompt": "<p>How can component abstraction be measured?</p>",
+    "answer": "<ul><li>Simply by measureing the ratio of abstraction classes and interfaces to concrete classes.</li><li>A = Na / Nc</li></ul>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "Clean Architecture - Robert C. Martin",
+    "section": "Components",
+    "module": "Component Coupling",
+    "topic": "The Main Sequence",
+    "prompt": "<p>What can be said about compnents with the following values of I (instability) and A (abstractness).</p><ul><li>[0,1] stable, abstract</li><li>[1,1] instable, abstract</li><li>[1,0] instable, concrete</li><li>[0,0] stable, concrete</li></ul>",
+    "answer": "<ul><li>[0,1] Best suited to high-level policies</li><li>[1,1]The zone of Uselessness: Empty dead code that is not used for anything.</li><li>[1,0] best suited to volotile components like UI</li><li>[0,0] The Zone of Pain: Diffciult to change or extend (database schema)</li></ul>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "Clean Architecture - Robert C. Martin",
+    "section": "Components",
+    "module": "Component Coupling",
+    "topic": "The Main Sequence",
+    "prompt": "<p>What is the Distance Metric used for and how is it calculated.</p>",
+    "answer": "<p>D = I+A-1 The distance metric determines if a component is close to the main sequence and therefore following good design preactices</p>",
     "promptType": "Question"
   }
 ]
