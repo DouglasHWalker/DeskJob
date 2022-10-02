@@ -961,6 +961,42 @@
     "prompt": "<p>What are Azure containers typically used for?</p>",
     "answer": "<p>Typically they are used to create solutions using a microservice architecture (solutions that are broken into smaller, independent pieces). For example, a website may be broken into containers for the front-end and another for the backend, and a third for storage.</p>",
     "promptType": "Question"
+  },
+  {
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Functions",
+    "prompt": "<p>Azure Functions</p>",
+    "answer": "<p>An Event-Driven, serverless compute option that doesn't require maintaining any virtual machines or containers. An event wakes the function alleviating the need (unlike VMs and containers) to keep resources provisioned when there are no events. .</p>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Functions",
+    "prompt": "<p>Benefits of Azure Functions</p>",
+    "answer": "<ul><li>No infrastructure management (no need to focus on server management)</li><li>Scalability</li><li>Only pay for what you use.</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Functions",
+    "prompt": "<p>What does it mean that Azure Functions can be stateless or stateful>?</p>",
+    "answer": "<ul><li>Stateless: They can behave as if they are restarted everytime they respond to an event</li><li>Stateful: (curable functions) a context is passed through the function to track prior activity.</li></ul>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Functions",
+    "prompt": "<p>Main purpose of Azure Functions?</p>",
+    "answer": "<p>A key component of serverless computing. They are a general compute platform for running any type of code.</p>",
+    "promptType": "Question"
   }
 
 ,
