@@ -899,8 +899,71 @@
     "answer": "<ul><li>Size: purpose, number of processor core, amount of RAM.</li><li>Storage Disks: hard disk drives, solid state drives</li><li>Networking: virtual network, public IP address, port configuration</li></ul>",
     "promptType": "Question"
   },
+  {
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Virtual Desktop",
+    "prompt": "<p>Azure Virtual Desktop</p>",
+    "answer": "<p>A type of virtual machine, it is a virtualisation service that enables you to use Windows from any location through the cloud.</p>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Virtual Desktop",
+    "prompt": "<p>What is AVD enhance security?</p>",
+    "answer": "<p>Azure Virtual Desktop enhances security by</p><ul><li>Providing centralised security management for user's desktops using Active Directory.</li><li>Seperating data and apps from local hardware, meaning the risk of confidential information being left on a personal device is reduced.</li><li>User sessions are isolated in both single and multi-session environments</li></ul>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Virtual Desktop",
+    "prompt": "<p>What is Multi-session AVD?</p>",
+    "answer": "<p>Multi-session Azure Virtual Desktop enables concurrent users on a single Windows 10 or 11 VM</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Containers",
+    "prompt": "<p>Azure Containers</p>",
+    "answer": "<p>A virtualisation environment in which (unlike VMs) the user does not manage the operating system. They are designed to be lightweight and therefore easily scalable to demand.</p>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Containers",
+    "prompt": "<p>Azure Container Instances</p>",
+    "answer": "<p>The fastest and simplest way to run a container in Azure; wihtou having to manage any virtual machines or adopt any additional services.</p>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Containers",
+    "prompt": "<p>Azure Container instances are what kind of Azure service type? (SaaS, PaaS, IaaS, On-prem)</p>",
+    "answer": "<p>Azure Container Instances are consided Platform as a Service (PaaS). The service will run the containers you upload for you.</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AZ-900: Microsoft Azure Fundamentals",
+    "section": "Describe Azure Architecture and Services",
+    "module": "Describe Compute and Networking Services",
+    "topic": "Azure Containers",
+    "prompt": "<p>What are Azure containers typically used for?</p>",
+    "answer": "<p>Typically they are used to create solutions using a microservice architecture (solutions that are broken into smaller, independent pieces). For example, a website may be broken into containers for the front-end and another for the backend, and a third for storage.</p>",
+    "promptType": "Question"
+  }
 
-
+,
   {
     "certificate": "Clean Architecture - Robert C. Martin",
     "section": "Components",
