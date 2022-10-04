@@ -997,9 +997,7 @@
     "prompt": "<p>Main purpose of Azure Functions?</p>",
     "answer": "<p>A key component of serverless computing. They are a general compute platform for running any type of code.</p>",
     "promptType": "Question"
-  }
-
-,
+  },
   {
     "certificate": "Clean Architecture - Robert C. Martin",
     "section": "Components",
@@ -1114,7 +1112,146 @@
     "module": "Component Coupling",
     "topic": "The Main Sequence",
     "prompt": "<p>What is the Distance Metric used for and how is it calculated.</p>",
-    "answer": "<p>D = I+A-1 The distance metric determines if a component is close to the main sequence and therefore following good design preactices</p>",
+    "answer": "<p>D = I+A-1 The distance metric determines if a component is close to the main sequence and therefore following good design practices</p>",
+    "promptType": "Question"
+  },
+
+
+
+
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 01 - Intro to Amazon Web Services",
+    "module": "Cloud Computing",
+    "topic": "What is Cloud Computing?",
+    "prompt": "<p>What is a Client-server model?</p>",
+    "answer": "<p>In computing, a client can be a web browser or desktop application that a person interacts with to make requests to computer servers. A server can be services such as Amazon Elastic Compute Cloud (Amazon EC2), a type of virtual server.</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 01 - Intro to Amazon Web Services",
+    "module": "Cloud Computing",
+    "topic": "What is Cloud Computing?",
+    "prompt": "<p>Cloud Computing</p>",
+    "answer": "<p>The on-demand delivery of IT resources and applications through the internet.</p>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 01 - Intro to Amazon Web Services",
+    "module": "Cloud Computing",
+    "topic": "Deployment Models",
+    "prompt": "<p>Cloud-based Deployment</p>",
+    "answer": "<ul><li>Run all parts of the application in the cloud.</li><li>Migrate existing applications to the cloud.</li><li>Design and build new applications in the cloud.</li></ul>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 01 - Intro to Amazon Web Services",
+    "module": "Cloud Computing",
+    "topic": "Deployment Models",
+    "prompt": "<p>On-Premises Deployment</p>",
+    "answer": "<p>On-premises deployment is also known as a private cloud deployment. In this model, resources are deployed on premises by using virtualization and resource management tools.</p>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 01 - Intro to Amazon Web Services",
+    "module": "Cloud Computing",
+    "topic": "Deployment Models",
+    "prompt": "<p>Hybrid Deployment</p>",
+    "answer": "<p>In a hybrid deployment, cloud-based resources are connected to on-premises infrastructure. </p>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 01 - Intro to Amazon Web Services",
+    "module": "Cloud Computing",
+    "topic": "Deployment Models",
+    "prompt": "<p>Benefits of Cloud Computing</p>",
+    "answer": "<ul><li>Trade upfront expense for variable expense</li><li>Stop spending money to run and maintain data centers</li><li>Stop guessing capacity</li><li>Benefit from massive economies of scale.</li><li>Increase Speed and Agility</li><li>Go global in minutes</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 01 - Intro to Amazon Web Services",
+    "module": "Cloud Computing",
+    "topic": "Deployment Models",
+    "prompt": "<p>Benefits of Cloud Computing</p>",
+    "answer": "<ul><li>Trade upfront expense for variable expense</li><li>Stop spending money to run and maintain data centers</li><li>Stop guessing capacity</li><li>Benefit from massive economies of scale.</li><li>Increase Speed and Agility</li><li>Go global in minutes</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 01 - Intro to Amazon Web Services",
+    "module": "Cloud Computing",
+    "topic": "Deployment Models",
+    "prompt": "<p>What is another name for on-premises deployment</p>",
+    "answer": "<p>Private Cloud Deployment</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 01 - Intro to Amazon Web Services",
+    "module": "Cloud Computing",
+    "topic": "Deployment Models",
+    "prompt": "<p>What is another name for on-premises deployment</p>",
+    "answer": "<p>Private Cloud Deployment</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 01 - Intro to Amazon Web Services",
+    "module": "Cloud Computing",
+    "topic": "Deployment Models",
+    "prompt": "<p>How does the scale of cloud computing help you to save costs?</p>",
+    "answer": "<p>The aggregated cloud usage from a large number of customers results in lower pay-as-you-go prices.</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 02 - Compute In AWS Cloud",
+    "module": "Amazon Elastic Compute Cloud",
+    "topic": "Elastic Compute Cloud - Overview",
+    "prompt": "<p>Benefits of Elastic Cloud over traditional on-premises resources?</p>",
+    "answer": "<ul><li>You can provision and launch an Amazon EC2 instance within minutes.</li><li>You can stop using it when you have finished running a workload.</li><li>You pay only for the compute time you use when an instance is running, not when it is stopped or terminated.</li><li>You can save costs by paying only for server capacity that you need or want.</li></ul>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 02 - Compute In AWS Cloud",
+    "module": "Amazon Elastic Compute Cloud",
+    "topic": "Elastic Compute Cloud - Overview",
+    "prompt": "<p>What are the steps to start using an Amazon EC2 instance?</p>",
+    "answer": "<ol><li>Launch: configuring the instance OS etc via basic templates and custom</li><li>Connect</li><li>Use: just like any normal computer, install software, updates, run applications all over the internet</li></ul>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 02 - Compute In AWS Cloud",
+    "module": "Amazon Elastic Compute Cloud",
+    "topic": "Elastic Compute Cloud - Overview",
+    "prompt": "<p>What are the steps to start using an Amazon EC2 instance?</p>",
+    "answer": "<ol><li>Launch: configuring the instance OS etc via basic templates and custom</li><li>Connect</li><li>Use: just like any normal computer, install software, updates, run applications all over the internet</li></ol>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 02 - Compute In AWS Cloud",
+    "module": "Amazon Elastic Compute Cloud",
+    "topic": "Elastic Compute Cloud - Instance Types",
+    "prompt": "<p>The 5 main Amazon EC2 instance types</p>",
+    "answer": "<ul><li>General Purpose Instance</li><li>Compute Optimised Instance</li><li>Memory Optimised Instance</li><li>Accelerated Computing Instance</li><li>Storage Optimised Instances</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Module 02 - Compute In AWS Cloud",
+    "module": "Amazon Elastic Compute Cloud",
+    "topic": "Elastic Compute Cloud - Overview",
+    "prompt": "<p>Why is it called EC2?</p>",
+    "answer": "<p>It stands for Elastic Compute Cloud (EC2)</p>",
     "promptType": "Question"
   }
 ]
