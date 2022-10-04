@@ -1121,8 +1121,8 @@
 
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 01 - Intro to Amazon Web Services",
-    "module": "Cloud Computing",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 01 - Intro to Amazon Web Services",
     "topic": "What is Cloud Computing?",
     "prompt": "<p>What is a Client-server model?</p>",
     "answer": "<p>In computing, a client can be a web browser or desktop application that a person interacts with to make requests to computer servers. A server can be services such as Amazon Elastic Compute Cloud (Amazon EC2), a type of virtual server.</p>",
@@ -1130,8 +1130,8 @@
   },
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 01 - Intro to Amazon Web Services",
-    "module": "Cloud Computing",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 01 - Intro to Amazon Web Services",
     "topic": "What is Cloud Computing?",
     "prompt": "<p>Cloud Computing</p>",
     "answer": "<p>The on-demand delivery of IT resources and applications through the internet.</p>",
@@ -1139,8 +1139,8 @@
   },
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 01 - Intro to Amazon Web Services",
-    "module": "Cloud Computing",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 01 - Intro to Amazon Web Services",
     "topic": "Deployment Models",
     "prompt": "<p>Cloud-based Deployment</p>",
     "answer": "<ul><li>Run all parts of the application in the cloud.</li><li>Migrate existing applications to the cloud.</li><li>Design and build new applications in the cloud.</li></ul>",
@@ -1148,8 +1148,8 @@
   },
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 01 - Intro to Amazon Web Services",
-    "module": "Cloud Computing",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 01 - Intro to Amazon Web Services",
     "topic": "Deployment Models",
     "prompt": "<p>On-Premises Deployment</p>",
     "answer": "<p>On-premises deployment is also known as a private cloud deployment. In this model, resources are deployed on premises by using virtualization and resource management tools.</p>",
@@ -1157,8 +1157,8 @@
   },
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 01 - Intro to Amazon Web Services",
-    "module": "Cloud Computing",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 01 - Intro to Amazon Web Services",
     "topic": "Deployment Models",
     "prompt": "<p>Hybrid Deployment</p>",
     "answer": "<p>In a hybrid deployment, cloud-based resources are connected to on-premises infrastructure. </p>",
@@ -1166,8 +1166,8 @@
   },
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 01 - Intro to Amazon Web Services",
-    "module": "Cloud Computing",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 01 - Intro to Amazon Web Services",
     "topic": "Deployment Models",
     "prompt": "<p>Benefits of Cloud Computing</p>",
     "answer": "<ul><li>Trade upfront expense for variable expense</li><li>Stop spending money to run and maintain data centers</li><li>Stop guessing capacity</li><li>Benefit from massive economies of scale.</li><li>Increase Speed and Agility</li><li>Go global in minutes</li></ul>",
@@ -1175,17 +1175,8 @@
   },
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 01 - Intro to Amazon Web Services",
-    "module": "Cloud Computing",
-    "topic": "Deployment Models",
-    "prompt": "<p>Benefits of Cloud Computing</p>",
-    "answer": "<ul><li>Trade upfront expense for variable expense</li><li>Stop spending money to run and maintain data centers</li><li>Stop guessing capacity</li><li>Benefit from massive economies of scale.</li><li>Increase Speed and Agility</li><li>Go global in minutes</li></ul>",
-    "promptType": "Define"
-  },
-  {
-    "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 01 - Intro to Amazon Web Services",
-    "module": "Cloud Computing",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 01 - Intro to Amazon Web Services",
     "topic": "Deployment Models",
     "prompt": "<p>What is another name for on-premises deployment</p>",
     "answer": "<p>Private Cloud Deployment</p>",
@@ -1193,8 +1184,8 @@
   },
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 01 - Intro to Amazon Web Services",
-    "module": "Cloud Computing",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 01 - Intro to Amazon Web Services",
     "topic": "Deployment Models",
     "prompt": "<p>What is another name for on-premises deployment</p>",
     "answer": "<p>Private Cloud Deployment</p>",
@@ -1202,8 +1193,8 @@
   },
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 01 - Intro to Amazon Web Services",
-    "module": "Cloud Computing",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 01 - Intro to Amazon Web Services",
     "topic": "Deployment Models",
     "prompt": "<p>How does the scale of cloud computing help you to save costs?</p>",
     "answer": "<p>The aggregated cloud usage from a large number of customers results in lower pay-as-you-go prices.</p>",
@@ -1211,47 +1202,290 @@
   },
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 02 - Compute In AWS Cloud",
-    "module": "Amazon Elastic Compute Cloud",
-    "topic": "Elastic Compute Cloud - Overview",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
     "prompt": "<p>Benefits of Elastic Cloud over traditional on-premises resources?</p>",
     "answer": "<ul><li>You can provision and launch an Amazon EC2 instance within minutes.</li><li>You can stop using it when you have finished running a workload.</li><li>You pay only for the compute time you use when an instance is running, not when it is stopped or terminated.</li><li>You can save costs by paying only for server capacity that you need or want.</li></ul>",
     "promptType": "Question"
   },
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 02 - Compute In AWS Cloud",
-    "module": "Amazon Elastic Compute Cloud",
-    "topic": "Elastic Compute Cloud - Overview",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
     "prompt": "<p>What are the steps to start using an Amazon EC2 instance?</p>",
     "answer": "<ol><li>Launch: configuring the instance OS etc via basic templates and custom</li><li>Connect</li><li>Use: just like any normal computer, install software, updates, run applications all over the internet</li></ul>",
     "promptType": "Question"
   },
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 02 - Compute In AWS Cloud",
-    "module": "Amazon Elastic Compute Cloud",
-    "topic": "Elastic Compute Cloud - Overview",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
     "prompt": "<p>What are the steps to start using an Amazon EC2 instance?</p>",
     "answer": "<ol><li>Launch: configuring the instance OS etc via basic templates and custom</li><li>Connect</li><li>Use: just like any normal computer, install software, updates, run applications all over the internet</li></ol>",
     "promptType": "Question"
   },
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 02 - Compute In AWS Cloud",
-    "module": "Amazon Elastic Compute Cloud",
-    "topic": "Elastic Compute Cloud - Instance Types",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
     "prompt": "<p>The 5 main Amazon EC2 instance types</p>",
     "answer": "<ul><li>General Purpose Instance</li><li>Compute Optimised Instance</li><li>Memory Optimised Instance</li><li>Accelerated Computing Instance</li><li>Storage Optimised Instances</li></ul>",
     "promptType": "Define"
   },
   {
     "certificate": "AWS Cloud Practitioner Essentials",
-    "section": "Module 02 - Compute In AWS Cloud",
-    "module": "Amazon Elastic Compute Cloud",
-    "topic": "Elastic Compute Cloud - Overview",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
     "prompt": "<p>Why is it called EC2?</p>",
     "answer": "<p>It stands for Elastic Compute Cloud (EC2)</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>General Purpose EC2 Instance Type</p>",
+    "answer": "<ul><li>Balances compute, memory, and networking resources.</li><li>Suitable for a broad range of workloads.</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>Compute Optimised EC2 Instance Type</p>",
+    "answer": "<ul><li>Offers high-performance processors.</li><li>Ideal for compute-intensive application and batch processing workloads.</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>Memory Optimised EC2 Instance Type</p>",
+    "answer": "<ul><li>Delievers fast performance for memory-intensive workloads.</li><li>Well suited for high-performance databases.</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>Accelerated Computing EC2 Instance Type</p>",
+    "answer": "<ul><li>Uses hardware accelerators to expediate data processing.</li><li>Ideal for application streaming and graphics workloads</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>Accelerated Computing EC2 Instance Type</p>",
+    "answer": "<ul><li>Uses hardware accelerators to expediate data processing.</li><li>Ideal for application streaming and graphics workloads</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>What EC2 Instance type is best suited to high-performance databases?</p>",
+    "answer": "<p>Memory optimised</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>What EC2 Instance type suitable for data warehousing applications?</p>",
+    "answer": "<p>Storage optimised</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>What EC2 Instance type balances compute, memory, and networking resources?</p>",
+    "answer": "<p>General Purpose</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>What EC2 Instance type ofers high performance processors?</p>",
+    "answer": "<p>Compute Optimised</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>On-Demand EC2 Pricing</p>",
+    "answer": "<ul><li>No upfront costs or minimum contracts</li><li>Ideal for short-term, irregular workloads</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>Spot EC2 Pricing</p>",
+    "answer": "<ul><li>Ideal for workloads with flexible start and end times</li><li>Offers savings over On-Demand prices</li><li>Utilises unused AWS capacity.instances allowing customers to save on costs.</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>Reserved EC2 Pricing</p>",
+    "answer": "<ul><li>Provides a billing discount over On-Demand pricing</li><li>Requires a 1 year or 3 year term commitment</li><li>When you no longer need your reserved instance, you can put it on the marketplace</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>Compute Savings Plans EC2 Pricing</p>",
+    "answer": "<ul><li>Offer up to 66% savings over On- Demand costs in exchange for commitments to a consistent amount of compute usage</li><li>Requires a 1 year or 3 year term commitment</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Compute Cloud",
+    "prompt": "<p>What is the difference between Compute Savings Plans and Spot Instances?</p>",
+    "answer": "<ul><li>Compute Savings Plans are ideal for workloads that involve a consistent amount of compute usage over a 1-year or 3-year term.</li><li>Spot Instances are ideal for workloads with flexible start and end times, or that can withstand interruptions.</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "EC2 Auto Scaling",
+    "prompt": "<p>The Two Types of EC2 Autoscaling</p>",
+    "answer": "<ul><li>Dynamic Scaling: Reacts to demand</li><li>Predictive Scaling: Scheduled by customer to meet predicted demand</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "EC2 Auto Scaling",
+    "prompt": "<p>What do the minimum, desired, and maximum values of an Auto Scaling Group dictate?</p>",
+    "answer": "<ul><li>Minimum: number of instances</li><li>Desired: a prediction of required number of instances and the number provisioned on group startup</li><li>Maximum: number of instances</li></ul>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "EC2 Auto Scaling",
+    "prompt": "<p>When does AWS EC2 decisde to scale up or down?</p>",
+    "answer": "<p>It doesn't the customer decides by:</p><ul><li>Specifying a usage metric (CPU, #Requests, Network Usage) that when breached AWS provisions or deprovisions instances in response.</li></ul>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "EC2 Auto Scaling",
+    "prompt": "<p>How much does EC2 Auto Scaling cost?</p>",
+    "answer": "<p>Nothing, you only pay for the instances you use.</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Load Balancing",
+    "prompt": "<p>Elastic Load Balancing</p>",
+    "answer": "<ul><li>Automatically distributes traffic across multiple resources</li><li>Provides a single point fo contact for your Auto Scaling Group</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Load Balancing",
+    "prompt": "<p>Elastic Load Balancing</p>",
+    "answer": "<ul><li>Automatically distributes traffic across multiple resources</li><li>Provides a single point fo contact for your Auto Scaling Group</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Elastic Load Balancing",
+    "prompt": "<p>What are the three types of AWS Load Balancing and what network layers do they operate on</p>",
+    "answer": "<ul><li>Network: Layer 4</li><li>Application: Layer 7</li><li>Gateway: Layer 3</li>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Quiz Question",
+    "prompt": "<p>Is this an example of Auto Scaling or Load Balancing?</p><p>Removes unneeded Amazon EC2 instances when demand is low.</p>",
+    "answer": "<p>Auto Scaling</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Quiz Question",
+    "prompt": "<p>Is this an example of Auto Scaling or Load Balancing?</p><p>Adds a second Amazon EC2 Instance during an online store's popular sale.</p>",
+    "answer": "<p>Auto Scaling</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Quiz Question",
+    "prompt": "<p>Is this an example of Auto Scaling or Load Balancing?</p><p>Automatically adjusts the number of Amazon EC2 instance to match demand.</p>",
+    "answer": "<p>Auto Scaling</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Quiz Question",
+    "prompt": "<p>Is this an example of Auto Scaling or Load Balancing?</p><p>Distributes a workload across several Amazon EC2 Instances.</p>",
+    "answer": "<p>Elastic Load Balancing</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Quiz Question",
+    "prompt": "<p>Is this an example of Auto Scaling or Load Balancing?</p><p>Ensures that no single EC2 instance has to carry the full workload on its own.</p>",
+    "answer": "<p>Elastic Load Balancing</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "AWS Messaging Services",
+    "prompt": "<p>Simple Notification Service (SNS).</p>",
+    "answer": "<ul><li>Messages are published to topics</li><li>Subscribers immediately receive messages for thier topics.</li></ul>",
     "promptType": "Question"
   }
 ]
