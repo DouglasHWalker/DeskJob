@@ -1484,8 +1484,125 @@
     "section": "Domain 2: Technology",
     "module": "Module 02 - Compute in the Cloud",
     "topic": "AWS Messaging Services",
-    "prompt": "<p>Simple Notification Service (SNS).</p>",
+    "prompt": "<p>Azure Simple Notification Service (SNS).</p>",
     "answer": "<ul><li>Messages are published to topics</li><li>Subscribers immediately receive messages for thier topics.</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "AWS Messaging Services",
+    "prompt": "<p>Azure Simple Queue Service (SNS).</p>",
+    "answer": "<ul><li>Send, store, and receive messages between software components</li><li>Queue messages without requiring other services to be available.</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "AWS Messaging Services",
+    "prompt": "<p>What do Azure Messaging services enable.</p>",
+    "answer": "<p>Architectures such as the Microservice Architecture or Service Architecture</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Serverless Computing",
+    "prompt": "<p>Azure Lambda</p>",
+    "answer": "<ul><li>Run code without provisioning or managing servers</li><li>Pay only for compute time while code is running</li><li>Use other AWS services to automatically trigger code</li></ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Serverless Computing",
+    "prompt": "<p>How does Lambda work, what are the steps involved?</p>",
+    "answer": "<ol><li>Upload code to Lambda</li><li>Set code to trigger from an event source.</li><li>Code runs only when triggered</li><li>Pay only for the compute time you use.</li></ol>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Serverless Computing",
+    "prompt": "<p>What is the maximum run-time for Lambda code?</p>",
+    "answer": "<p>15 Minutes</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "AWS Container Services",
+    "prompt": "<p>What are the three main orchestration services offered by AWS?</p>",
+    "answer": "<ul><li>Elastic Container Service (ECS)</li><li>Elastic Kubernetes Service (EKS)</li><li>FarGate</li><ul>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "AWS Container Services",
+    "prompt": "<p>Amazon Elastic Container Service (ECS)</p>",
+    "answer": "<ul><li>Run and scale containerised applications.</li><li>Use simple API calls to control Docker-enabled applications</li><ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "AWS Container Services",
+    "prompt": "<p>Amazon Elastic Kubernetes Service (EKS)</p>",
+    "answer": "<ul><li>Run and scale Kubernetes applications.</li><li>Readily update applications with new features.</li><ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "AWS Container Services",
+    "prompt": "<p>FarGate</p>",
+    "answer": "<ul><li>Runs serverless versions of Amazon ECS or EKS containers.</li><li>Pay for only the resources you use.</li><li>Takes your containers and runs them serverless.</li><ul>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Quiz Question",
+    "prompt": "<p>A customer wants to use an Amazon ECS instance for a <b>batch</b> processing workload. Which EC2 instance type should they use?</p>",
+    "answer": "<p>Compute Optimised</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Quiz Question",
+    "prompt": "<p>What are the contract length options for Amazon EC2 Reserved Instances?</p>",
+    "answer": "<p>1-3 Years</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Quiz Question",
+    "prompt": "<p>A customer has a workload that will run for a total of 6 months and can withstand interruptions. What would be the most cost-efficient Amazon EC2 instance purchasing option?</p>",
+    "answer": "<p>Spot Instance</p>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 2: Technology",
+    "module": "Module 02 - Compute in the Cloud",
+    "topic": "Quiz Question",
+    "prompt": "<p>A customer wants to give users messages for the specific topics to which they have subscribed. Which service should they use?</p>",
+    "answer": "<p>Amazon Simple Messageing Service (SNS)</p>",
     "promptType": "Question"
   }
 ]
