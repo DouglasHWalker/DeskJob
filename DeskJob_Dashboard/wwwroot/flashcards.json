@@ -1604,5 +1604,59 @@
     "prompt": "<p>A customer wants to give users messages for the specific topics to which they have subscribed. Which service should they use?</p>",
     "answer": "<p>Amazon Simple Messageing Service (SNS)</p>",
     "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 03 - Global Infrastructure",
+    "topic": "Regions",
+    "prompt": "<p>What factors should you consider when choosing an Amazon Region?</p>",
+    "answer": "<ul><li>Compliance with data governance and legal requirements</li><li>Proximity to your customers</li><li>Available services within a region</li><li>Pricing (service pricing differs per region)</li></ul>",
+    "promptType": "Question"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 03 - Global Infrastructure",
+    "topic": "Regions",
+    "prompt": "<p>Availability Zone</p>",
+    "answer": "<p>A single Datacenter or group of data centers withing a Region. Located tens of miles apart, close enough to have low latency, distant enough to provide redundancy protection</p>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 03 - Global Infrastructure",
+    "topic": "Regions",
+    "prompt": "<p>Availability Zone</p>",
+    "answer": "<p>A single Datacenter or group of data centers withing a Region. Located tens of miles apart, close enough to have low latency, distant enough to provide redundancy protection</p>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 03 - Global Infrastructure",
+    "topic": "Quiz Question",
+    "prompt": "<p>Which statement best describes an Availability Zone?</p><ul><li>A geographical area that contains AWS resources</li><li>A single data center or group of data centers within a region.</li><li>A data center that an AWS service uses to perform service-specific operations</li><li>A service that you can use to run AWS infrastructure within your own on-premises data center in a hybrid approach</li></ul>",
+    "answer": "<p>A single Datacenter or group of data centers withing a Region. Located tens of miles apart, close enough to have low latency, distant enough to provide redundancy protection</p>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 03 - Global Infrastructure",
+    "topic": "Edge Locations",
+    "prompt": "<p>Edge Location</p>",
+    "answer": "<p>A site that Amazon CloudFront uses to store cached copies of your content closer to your customers for faster delivery.</p>",
+    "promptType": "Define"
+  },
+  {
+    "certificate": "AWS Cloud Practitioner Essentials",
+    "section": "Domain 1: Cloud Concepts",
+    "module": "Module 03 - Global Infrastructure",
+    "topic": "AWS Outposts",
+    "prompt": "<p>AWS Outposts</p>",
+    "answer": "<p>Installs a fully operational min-Region inside your own datacenter. It is owned and operated by AWS but is isolated within your own building.</p>",
+    "promptType": "Define"
   }
 ]

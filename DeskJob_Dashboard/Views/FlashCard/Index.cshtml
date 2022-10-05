@@ -81,14 +81,11 @@
     let current_card = cards[0];
     let completedCount = 0;
 
-    console.log(JSON.stringify(cards));
-
     window.onload = (event) => {
         //UpdateDOM_CardInfoDropdown('certificate');
         document.getElementById("ddl_certificate").value = "All";
         Lock_CardInfoDropdown(document.getElementById("ddl_certificate"));
     }
-
 
     function remindCard() {
         addCard(current_card);
@@ -139,11 +136,17 @@
         completedCount = -1;
         nextCard();
 
+        // filter filters
+        
+        let filt_cert = new Set(current_cardset.map(fc => fc.certification));
+        let filt_section = new Set(current_cardset.map(fc => fc.section));
+        let filt_module = new Set(current_cardset.map(fc => fc.module));
+        console.log(filt_cert, filt_module, filt_section);
+
+
+
         // unlock relevant dropdowns depending on category
         UpdateDOM_CardInfoDropdown(property);
-
-        // change the current card
-        //
     }
 
     //Card dropdowns
@@ -187,6 +190,12 @@
         }
     }
 
+    function Set_CardInfoDropdown(values, id){
+        let dropdown = document.getElementById(id);
+        dropdown.empty();
+        dropdown.append('<option value=')
+
+    }
 
     function Update_CardInfoDropdown_IfNotLocked(value, id) {
         let dropdown = document.getElementById(id);
