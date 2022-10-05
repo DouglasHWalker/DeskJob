@@ -137,16 +137,31 @@
         nextCard();
 
         // filter filters
-        
-        let filt_cert = new Set(current_cardset.map(fc => fc.certification));
+        let filt_cert = new Set(current_cardset.map(fc => fc.certificate));
         let filt_section = new Set(current_cardset.map(fc => fc.section));
         let filt_module = new Set(current_cardset.map(fc => fc.module));
-        console.log(filt_cert, filt_module, filt_section);
+        console.log(filt_cert, filt_section, filt_module);
 
-
+        Set_DropdownOptions("ddl_certificate", filt_cert);
+        Set_DropdownOptions("ddl_section", filt_section);
+        Set_DropdownOptions("ddl_module", filt_module);
+        
 
         // unlock relevant dropdowns depending on category
         UpdateDOM_CardInfoDropdown(property);
+    }
+
+    function Set_DropdownOptions(id, values){
+        let newOptions = "";
+        let ddl = document.getElementById(id);
+
+        for (let value of values){
+            if (id == "ddl_certificate") {
+                newOptions += "<option value='All'>All Certifications/Subjects</option>";
+                newOptions += "<option selected value='" + value + "'>" + value + "</option>";
+            } else newOptions += "<option value='" + value + "'>" + value + "</option>";
+        }
+        ddl.innerHTML = newOptions;
     }
 
     //Card dropdowns
