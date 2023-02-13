@@ -3,9 +3,9 @@
 function calcEarnPerSecond() {
     calculateElapsed();
 
-    var baseSalary = 58149.53;
+    var baseSalary = 65000;
     var superContribution = document.getElementById("super").checked ? 0.895 : 1.0;
-    var taxPayable = document.getElementById("tax").checked ? 1541.28 : 0;
+    var taxPayable = document.getElementById("tax").checked ? 9374 : 0;
 
     // Calculate the earnings per second
     // var earnPerSecond = (((58149.53 * 0.895) - 9365.42) / 52 / 5 / 7.5 / 60 / 60);

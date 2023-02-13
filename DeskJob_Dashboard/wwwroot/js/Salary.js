@@ -14,7 +14,7 @@ let elapsedToday, elapsedThisWeek, elapsedThisPaycycle, elapsedThisMonth, elapse
 
 function calculateElapsed() {
     var now = new Date();
-    var startDate = new Date(2022, 6, 18, 9, 0);
+    var startDate = new Date(2023, 2, 13, 9, 0);
     var startTime = new Date();
     startTime.setHours(9, 0, 0, 0);
     var endTime = new Date();
